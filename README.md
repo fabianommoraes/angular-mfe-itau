@@ -40,6 +40,75 @@ Ainda no diretório shell-mod, execute em outra aba do terminal:
 
 A aplicação Shell (também conhecida como Host), será servida em `http://localhost:4200/`
 
+O DS pode ser acessado no diretório design-system. Não possui aplicação principal, mas possui Storybook.
+Para acessar os componentes:
+
+`npm i`
+
+`npm run storybook`
+
+**Observação**: Mantenha as pastas no mesmo diretório para que possam importar o componentes do DS.
+O DS não precisa ser executado para o projeto funcionar.
+
+
+### Pastas
+
+### `shell-mod/`
+Host da aplicação. Contém as rotas e carrega dinamicamente os Remotes. 
+Possui uma página home (`http://localhost:4200/`) com componentes internos (não é carregado um Remote).
+
+### `using-mod/`
+Remote responsável pela realização do Cadastro. 
+Pode ser executado e acessado em `http://localhost:4201/`
+
+### `sucess/`
+Remote responsável por exibir os dados do Cadastro. 
+Pode ser executado e acessado em `http://localhost:4202/`
+
+### `design-system/`
+Biblioteca de componentes que simula um pacote de DS.
+
+---
+
+## Estrutura
+
+```plaintext
+angular-mfe-itau/
+│
+├── shell-mod/
+│   ├── src/
+│   ├── package.json
+│    .
+│    .
+│    .
+│   └── README.md
+│
+├── using-mod/
+│   ├── src/
+│   ├── package.json
+│    .
+│    .
+│    .
+│   └── README.md
+│
+├── sucess-mod/
+│   ├── src/
+│   ├── package.json
+│    .
+│    .
+│    .
+│   └── README.md
+│
+└──design-system/
+    ├── src/
+    ├── package.json
+     .
+     .
+     .
+    └── README.md
+
+```
+
 ## Sobre o projeto
 
 O projeto foi desenvolvido em Angular 20, utilizando o CLI para *bootstrapar* a aplicação.
