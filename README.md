@@ -30,11 +30,11 @@ No diretório using-mod, execute:
 
 No diretório shell-mod, execute:
 
+`npm i`
+
 `npx json-server db.json`
 
 Ainda no diretório shell-mod, execute em outra aba do terminal:
-
-`npm i`
 
 `ng serve`
 
