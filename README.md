@@ -82,11 +82,11 @@ Para rodar os testes de unidade, utilize o seguinte comando:
 
 
 ## Testes E2E
-Para rodar os testes de unidade, digite o seguinte comando (disponível apenas no projeto `shell-mod`):
+Para rodar os testes de *e2e*, digite o seguinte comando (disponível apenas no projeto `shell-mod`):
 
 `npm run cypress:open`
 
-![Captura de tela de 2024-02-27 21-39-18](https://github.com/fabianommoraes/meli-challenge-nextjs/assets/11391586/448a430b-ec89-4cd8-8c16-3eceb0c3798b)
+<img width="1781" height="965" alt="Captura de tela de 2025-08-10 04-07-31" src="https://github.com/user-attachments/assets/772c904a-1537-49a8-9bf3-81fd573a6b06" />
 
 
 ## GitHub Actions
