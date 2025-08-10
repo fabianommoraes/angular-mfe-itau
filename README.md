@@ -14,7 +14,19 @@ Neste repositório também encontra-se o projeto de **Design System** (DS): um p
 Idealmente o Desing System poderia ser exportado e publicado como um pacote `npm` para que os MFEs consumissem seus componentes. Nesse repositório os componentes são apenas importados localmente, simulando um Design System (desta maneira os projetos precisam estar no mesmo diretório).
 
 ## Instalação
-Para instalar os projetos e executá-los (siga esta ordem):
+Para instalar os projetos e executá-los, siga esta ordem:
+
+No diretório `shell-mod`, execute:
+
+`npm i`
+
+`npx json-server db.json`
+
+
+No diretório `design-system`, execute:
+
+`npm i`
+
 
 No diretório sucess-mod, execute:
 
@@ -28,29 +40,23 @@ No diretório using-mod, execute:
 
 `ng serve`
 
-No diretório shell-mod, execute:
-
-`npm i`
-
-`npx json-server db.json`
-
-Ainda no diretório shell-mod, execute em outra aba do terminal:
+Volte ao diretório shell-mod, execute:
 
 `ng serve`
 
 A aplicação Shell (também conhecida como Host), será servida em `http://localhost:4200/`
+A aplicação de cadastro será servida em `http://localhost:4201/` e para acessar o módulo servido ao host: `http://localhost:4201/user`
+A aplicação de sucesso será servida em `http://localhost:4202/` e para acessar o módulo servido ao host: `http://localhost:4202/sucesso` ou `http://localhost:4202/sucesso/usuario/:userId` 
 
-O DS pode ser acessado no diretório design-system. Não possui aplicação principal, mas possui Storybook.
-Para acessar os componentes:
+O DS não possui aplicação principal, mas possui Storybook.
 
-`npm i`
+Para acessar os componentes, dentro do diretório `design-system`:
 
 `npm run storybook`
 
 Acesse `http://localhost:6006/`
 
 **Observação**: Mantenha as pastas no mesmo diretório para que possam importar o componentes do DS.
-O DS não precisa ser executado para o projeto funcionar.
 
 
 ### Pastas
