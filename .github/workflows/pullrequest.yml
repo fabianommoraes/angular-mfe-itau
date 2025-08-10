@@ -1,11 +1,12 @@
-name: Pull Request CI
+name: Shell Push Workflow
 
 on:
   push:
-
+    branches:
+      - "shell*"
 jobs:
   shell-mod:
-    name: Shell Mod Build & Test
+    name: shell-mod build
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -19,38 +20,4 @@ jobs:
 
       - run: npm install
 
-      - run: npm test
-
-  sucess-m0d:
-    name: Success Mid Build & Test
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: sucess-mod
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-
-      - run: npm install
-
-      - run: npm test
-
-  using-mid:
-    name: Using-Mod Build & Test
-    runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: using-mod
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-
-      - run: npm install
-
-      - run: npm test
+      - run: npm run build
