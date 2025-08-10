@@ -1,0 +1,77 @@
+@if(error) {
+<app-notfound />
+} @else {
+
+<div class="ds-success-shell">
+  @if(loading) {
+  <ds-skeleton
+    [borderRadius]="'50%'"
+    [width]="'64px'"
+    [height]="'64px'"
+  ></ds-skeleton>
+  } @else {
+  <div class="sucesso-icone">
+    <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+      <circle cx="32" cy="32" r="32" fill="#2eaf62" />
+      <path
+        d="M18 33L28 43L46 25"
+        stroke="#fff"
+        stroke-width="5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </div>
+
+  } @if(loading) {
+  <ds-skeleton [width]="'200px'" [height]="'32px'"></ds-skeleton>
+  } @else {
+  <ds-typography
+    text="Sucesso!"
+    tag="h1"
+    size="xl"
+    weight="bold"
+  ></ds-typography>
+  } @if(loading) {
+  <ds-skeleton [width]="'400px'" [height]="'24px'"></ds-skeleton>
+  } @else {
+  <ds-typography
+    text="Seu cadastro foi concluído."
+    tag="p"
+    size="lg"
+  ></ds-typography>
+  }
+  <div class="success-data-container">
+    <div class="success-data-field">
+      @if(loading) {
+      <ds-skeleton [width]="'732px'" [height]="'32px'"></ds-skeleton>
+      } @else {
+      <ds-typography text="Nome: " />
+      <ds-typography [text]="name" />
+      }
+    </div>
+    <div class="success-data-field">
+      @if(loading) {
+      <ds-skeleton [width]="'732px'" [height]="'32px'"></ds-skeleton>
+      } @else {
+      <ds-typography text="E-mail: " />
+      <ds-typography [text]="email" />
+      }
+    </div>
+    <div class="success-data-field">
+      @if(loading) {
+      <ds-skeleton [width]="'732px'" [height]="'32px'"></ds-skeleton>
+      } @else {
+      <ds-typography text="Tipo: " />
+      <ds-typography [text]="choice" />
+      }
+    </div>
+  </div>
+
+  @if(!loading) {
+  <app-table [type]="choice"></app-table>
+
+  <ds-button text="Voltar" tag="a" href="/" size="large" />
+  }
+</div>
+}

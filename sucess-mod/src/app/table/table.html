@@ -1,0 +1,64 @@
+@if (type === 'URL Params') {
+
+<table class="ds-table">
+  <thead>
+    <tr>
+      <th class="ds-table-header">Prós</th>
+      <th class="ds-table-header">Contras</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="ds-table-pro">Fácil de implementar e debugar.</td>
+      <td class="ds-table-con">
+        Pouco seguro: dados expostos na barra de endereço.
+      </td>
+    </tr>
+    <tr>
+      <td class="ds-table-pro">
+        Permite comunicação entre MFEs sem acoplamento direto.
+      </td>
+      <td class="ds-table-con">Limitação de tamanho para dados complexos.</td>
+    </tr>
+    <tr>
+      <td class="ds-table-pro">Visível e compartilhável via link.</td>
+      <td class="ds-table-con">Pode poluir a URL e dificultar manutenção.</td>
+    </tr>
+  </tbody>
+</table>
+} @if (type === 'API') {
+
+<table class="ds-table">
+  <thead>
+    <tr>
+      <th class="ds-table-header">Prós</th>
+      <th class="ds-table-header">Contras</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="ds-table-pro">
+        Permite troca de dados entre MFEs de qualquer tecnologia ou domínio.
+      </td>
+      <td class="ds-table-con">
+        Maior latência: depende do backend e da rede.
+      </td>
+    </tr>
+    <tr>
+      <td class="ds-table-pro">
+        Escalável para múltiplos MFEs e múltiplos canais.
+      </td>
+      <td class="ds-table-con">Pode exigir autenticação/segurança extra.</td>
+    </tr>
+    <tr>
+      <td class="ds-table-pro">
+        Ideal para dados persistentes e integração com sistemas externos.
+      </td>
+      <td class="ds-table-con">
+        Implantações desacopladas podem gerar inconsistências temporárias.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+}

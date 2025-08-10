@@ -1,0 +1,22 @@
+<fieldset class="radio-group" [attr.aria-labelledby]="name + '-legend'">
+  <legend class="custom-radio-label" [id]="name + '-legend'">
+    {{ label }}
+  </legend>
+
+  @for (option of options; track option.value) {
+  <label class="radio-option" [for]="name + '-' + option.value">
+    <input
+      type="radio"
+      [id]="name + '-' + option.value"
+      [name]="name"
+      [value]="option.value"
+      [checked]="value === option.value"
+      (change)="select(option.value)"
+      class="custom-radio-input"
+      [attr.aria-checked]="value === option.value ? 'true' : 'false'"
+    />
+    <span class="custom-radio-custom"></span>
+    <span class="custom-radio-text">{{ option.label }}</span>
+  </label>
+  }
+</fieldset>

@@ -1,0 +1,253 @@
+@import "../../../../design-system/src/styles.scss";
+
+.itau-form-shell {
+  background: $ds-white;
+  padding: $ds-spacing-md 2vw $ds-spacing-md 2vw;
+  max-width: 98vw;
+  margin: $ds-spacing-xl auto;
+  font-family: $ds-font-family;
+  position: relative;
+}
+
+.itau-form-header {
+  margin-bottom: $ds-spacing-xl;
+  text-align: center;
+  border-bottom: 2px solid $ds-primary;
+  padding-bottom: $ds-spacing-md;
+}
+
+.itau-title {
+  font-size: $ds-font-size-xl;
+  font-weight: $ds-font-weight-bold;
+  color: $ds-primary;
+  margin-bottom: $ds-spacing-xs;
+  letter-spacing: -1px;
+}
+
+.itau-subtitle {
+  font-size: $ds-font-size-lg;
+  font-weight: $ds-font-weight-bold;
+  color: $ds-dark;
+  margin-bottom: $ds-spacing-sm;
+}
+
+.itau-paragraph {
+  font-size: $ds-font-size-md;
+  color: $ds-dark;
+  margin-bottom: $ds-spacing-xs;
+}
+
+.itau-small-text {
+  font-size: $ds-font-size-sm;
+  color: $ds-gray;
+}
+
+.itau-form {
+  display: flex;
+  flex-direction: column;
+  gap: $ds-spacing-xl;
+}
+
+.itau-form-columns {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: space-between;
+}
+
+.itau-form-left,
+.itau-form-right {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: $ds-spacing-xl;
+}
+
+.itau-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: $ds-spacing-sm;
+  background: $ds-light;
+  padding: $ds-spacing-md;
+  border-radius: $ds-spacing-md;
+  box-shadow: 0 1px 6px rgba($ds-primary, 0.07);
+  border: 1px solid $ds-border;
+}
+
+.itau-label {
+  font-size: $ds-font-size-md;
+  font-weight: $ds-font-weight-bold;
+  color: $ds-primary;
+  display: flex;
+  align-items: center;
+  gap: $ds-spacing-xs;
+}
+.itau-label-icon {
+  font-size: $ds-font-size-lg;
+  color: $ds-primary;
+  margin-right: $ds-spacing-xs;
+}
+
+.itau-input {
+  padding: $ds-spacing-sm $ds-spacing-md;
+  border: 1.5px solid $ds-primary;
+  border-radius: $ds-spacing-sm;
+  font-size: $ds-font-size-md;
+  background: $ds-white;
+  color: $ds-dark;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  font-weight: $ds-font-weight-normal;
+  box-shadow: 0 1px 4px rgba($ds-primary, 0.07);
+}
+.itau-input:focus {
+  border-color: $ds-dark;
+  box-shadow: 0 2px 8px rgba($ds-primary, 0.13);
+}
+
+.itau-error {
+  color: $ds-primary;
+  font-size: $ds-font-size-xs;
+  margin-top: $ds-spacing-xs;
+  min-height: 18px;
+  font-weight: $ds-font-weight-normal;
+}
+
+.itau-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: $ds-spacing-sm;
+  margin-top: $ds-spacing-xs;
+}
+
+.itau-radio-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: $ds-spacing-sm;
+  position: relative;
+  font-size: $ds-font-size-md;
+  font-weight: $ds-font-weight-normal;
+  color: $ds-dark;
+  user-select: none;
+  padding: $ds-spacing-xs 0;
+}
+
+.itau-radio {
+  opacity: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.itau-custom-radio {
+  width: 21px;
+  height: 21px;
+  border: 2px solid $ds-primary;
+  border-radius: 50%;
+  background: $ds-white;
+  display: inline-block;
+  margin-right: $ds-spacing-sm;
+  position: relative;
+  transition: border-color 0.2s;
+  box-shadow: 0 1px 4px rgba($ds-primary, 0.1);
+}
+.itau-radio:checked + .itau-custom-radio {
+  border-color: $ds-dark;
+  background: $ds-primary;
+}
+.itau-radio:checked + .itau-custom-radio::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: $ds-white;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.itau-form-actions {
+  display: flex;
+  gap: $ds-spacing-lg;
+  justify-content: center;
+}
+
+.itau-btn {
+  background: $ds-primary;
+  color: $ds-white;
+  border: none;
+  border-radius: $ds-spacing-md;
+  font-size: $ds-font-size-lg;
+  font-weight: $ds-font-weight-bold;
+  padding: $ds-spacing-md 0;
+  min-width: 150px;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 6px rgba($ds-primary, 0.1);
+  display: flex;
+  align-items: center;
+  gap: $ds-spacing-sm;
+  justify-content: center;
+}
+.itau-btn:hover {
+  background: $ds-dark;
+  box-shadow: 0 2px 12px rgba($ds-primary, 0.15);
+}
+.itau-btn-secondary {
+  background: $ds-white;
+  color: $ds-primary;
+  border: 2px solid $ds-primary;
+}
+.itau-btn-secondary:hover {
+  background: $ds-light;
+  color: $ds-dark;
+  border-color: $ds-dark;
+}
+
+.itau-btn-icon {
+  font-size: $ds-font-size-lg;
+  vertical-align: middle;
+}
+
+.itau-success {
+  background: $ds-light;
+  color: $ds-primary;
+  border-radius: $ds-spacing-md;
+  padding: $ds-spacing-md;
+  margin-top: $ds-spacing-xl;
+  text-align: center;
+  font-weight: $ds-font-weight-bold;
+  font-size: $ds-font-size-md;
+  box-shadow: 0 1px 6px rgba($ds-primary, 0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $ds-spacing-sm;
+}
+.itau-success-icon {
+  font-size: $ds-font-size-xl;
+  margin-bottom: $ds-spacing-xs;
+}
+
+@media (min-width: 700px) {
+  .itau-form-shell {
+    max-width: 540px;
+    padding: $ds-spacing-xl;
+    border-radius: $ds-spacing-lg;
+    box-shadow: 0 3px 18px rgba($ds-dark, 0.13);
+  }
+  .itau-form-columns {
+    flex-direction: row;
+    gap: $ds-spacing-xl;
+  }
+  .itau-form-left,
+  .itau-form-right {
+    gap: $ds-spacing-lg;
+  }
+
+  .itau-form-group {
+    padding: $ds-spacing-md $ds-spacing-lg;
+  }
+}

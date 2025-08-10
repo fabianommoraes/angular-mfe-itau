@@ -1,0 +1,111 @@
+@import "../../../../design-system/src/styles.scss";
+
+.ds-success-shell {
+  background: $ds-white;
+  border-radius: $ds-spacing-lg;
+  box-shadow: 0 1px 8px rgba($ds-dark, 0.1);
+  padding: $ds-spacing-xl;
+  max-width: 800px;
+  margin: $ds-spacing-xl auto;
+  display: flex;
+  flex-direction: column;
+  gap: $ds-spacing-md;
+  align-items: center;
+  font-family: $ds-font-family;
+}
+
+.ds-success-icon {
+  font-size: $ds-font-size-xl;
+  color: $ds-primary;
+  margin-bottom: $ds-spacing-md;
+}
+
+.ds-success-title {
+  font-size: $ds-font-size-lg;
+  font-weight: $ds-font-weight-bold;
+  color: $ds-dark;
+  margin-bottom: $ds-spacing-sm;
+  text-align: center;
+}
+
+.ds-success-message {
+  font-size: $ds-font-size-md;
+  color: $ds-dark;
+  margin-bottom: $ds-spacing-lg;
+  text-align: center;
+}
+
+.ds-success-btn {
+  background: $ds-primary;
+  color: $ds-white;
+  border: none;
+  border-radius: $ds-spacing-md;
+  font-size: $ds-font-size-md;
+  font-weight: $ds-font-weight-bold;
+  padding: $ds-spacing-md $ds-spacing-lg;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba($ds-primary, 0.13);
+
+  &:hover {
+    background: $ds-dark;
+  }
+}
+
+.success-data-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: $ds-spacing-sm;
+  background: transparent;
+  padding: 0;
+}
+
+.success-data-field {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: $ds-spacing-md;
+  align-items: flex-start;
+  padding: $ds-spacing-sm 0;
+  border-bottom: 1px solid $ds-gray;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.success-data-label {
+  color: $ds-primary;
+  font-weight: $ds-font-weight-bold;
+  font-size: $ds-font-size-sm;
+  letter-spacing: 0.01em;
+  flex: 1 1 40%;
+  text-align: left;
+}
+
+.success-data-value {
+  color: $ds-dark;
+  font-weight: $ds-font-weight-normal;
+  font-size: $ds-font-size-md;
+  flex: 2 1 60%;
+  text-align: right;
+  word-break: break-word;
+}
+
+@media (max-width: 600px) {
+  .success-data-field {
+    flex-direction: column;
+    gap: $ds-spacing-xs;
+    align-items: stretch;
+  }
+  .success-data-label,
+  .success-data-value {
+    text-align: left;
+    font-size: $ds-font-size-sm;
+  }
+
+  .ds-success-shell {
+    border-radius: none;
+    box-shadow: none;
+  }
+}

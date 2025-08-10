@@ -1,0 +1,155 @@
+@import "../../../../design-system/src/styles.scss";
+
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  font-family: $ds-font-family;
+  background: $ds-white;
+}
+
+.ds-welcome-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: $ds-white;
+  width: 100%;
+  max-width: 98vw;
+  overflow: hidden;
+}
+
+.ds-welcome-hero__left {
+  flex: 1 1 auto;
+  padding: $ds-spacing-lg;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: $ds-spacing-lg;
+}
+
+.ds-welcome-logo {
+  margin-bottom: $ds-spacing-md;
+  filter: drop-shadow(0 3px 12px rgba($ds-primary, 0.2));
+}
+
+.ds-welcome-slogan {
+  color: $ds-primary;
+  font-size: $ds-font-size-lg;
+  font-weight: $ds-font-weight-bold;
+  margin-bottom: $ds-spacing-sm;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 6px rgba($ds-primary, 0.1);
+}
+
+.ds-welcome-desc {
+  color: $ds-dark;
+  font-size: $ds-font-size-md;
+  font-weight: $ds-font-weight-normal;
+  margin-bottom: 0;
+  line-height: 1.5;
+  text-shadow: 0 1px 4px rgba($ds-gray, 0.1);
+}
+
+.ds-welcome-hero__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $ds-primary;
+  flex: none;
+  width: 100%;
+  padding: $ds-spacing-md;
+}
+
+.ds-welcome-feito {
+  color: $ds-white;
+  font-size: 2.5rem;
+  font-weight: $ds-font-weight-bold;
+  letter-spacing: 2px;
+  text-shadow: 0 4px 16px rgba($ds-dark, 0.2), 0 2px 8px rgba($ds-white, 0.1);
+  margin: 0 auto;
+  user-select: none;
+}
+
+.ds-welcome-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $ds-gray;
+  border-radius: 32px;
+  width: 120px;
+  height: 120px;
+  margin: $ds-spacing-md auto;
+}
+
+.ds-welcome-smile {
+  font-size: 60px;
+  font-weight: 700;
+  color: $ds-primary;
+  margin: 0;
+  line-height: 1;
+  user-select: none;
+}
+
+@media (min-width: 700px) {
+  :host {
+    background: $ds-light;
+  }
+  .ds-welcome-hero {
+    flex-direction: row;
+    background: linear-gradient(90deg, $ds-white 70%, $ds-primary 120%);
+    max-width: 960px;
+    min-height: 340px;
+    border-radius: $ds-spacing-lg;
+    box-shadow: 0 4px 16px rgba($ds-dark, 0.1), 0 2px 6px rgba($ds-primary, 0.1);
+  }
+
+  .ds-welcome-hero__left {
+    padding: $ds-spacing-xl;
+  }
+
+  .ds-welcome-slogan {
+    font-size: $ds-font-size-xl;
+    margin-bottom: $ds-spacing-md;
+  }
+
+  .ds-welcome-desc {
+    font-size: $ds-font-size-lg;
+  }
+
+  .ds-welcome-hero__right {
+    flex: 0 0 320px;
+    padding: $ds-spacing-lg;
+  }
+
+  .ds-welcome-feito {
+    font-size: 4rem;
+    margin-right: -$ds-spacing-lg;
+    margin-left: $ds-spacing-lg;
+  }
+
+  .ds-welcome-icon {
+    width: 180px;
+    height: 180px;
+  }
+
+  .ds-welcome-smile {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 500px) {
+  .ds-welcome-hero__left {
+    padding: $ds-spacing-lg;
+  }
+
+  .ds-welcome-feito {
+    font-size: 2rem;
+  }
+
+  .ds-welcome-icon {
+    width: 100px;
+    height: 100px;
+  }
+}

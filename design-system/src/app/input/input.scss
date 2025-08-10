@@ -1,0 +1,50 @@
+@import "../../styles.scss";
+
+.custom-input-label {
+  display: block;
+  margin-bottom: $ds-spacing-sm;
+  font-size: $ds-font-size-md;
+  font-weight: $ds-font-weight-bold;
+  color: $ds-primary;
+  font-family: $ds-font-family;
+}
+
+.custom-input {
+  width: 100%;
+  min-height: 40px;
+  padding: 0 $ds-spacing-md;
+  font-family: $ds-font-family;
+  font-size: $ds-font-size-md;
+  font-weight: $ds-font-weight-normal;
+  color: $ds-dark;
+  background: $ds-white;
+  border: 2px solid $ds-border;
+  border-radius: $ds-spacing-sm;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba($ds-dark, 0.04);
+
+  &:focus {
+    border-color: $ds-primary;
+    box-shadow: 0 0 0 4px rgba($ds-primary, 0.12);
+    outline: none;
+  }
+  &.invalid {
+    border-color: red;
+    box-shadow: 0 0 0 2px rgba(red, 0.1);
+  }
+  &:disabled {
+    background: $ds-gray;
+    color: $ds-dark;
+    border-color: $ds-border;
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+}
+
+.custom-input-error {
+  margin-top: $ds-spacing-xs;
+  color: red;
+  font-size: $ds-font-size-md;
+  margin: $ds-spacing-sm 0 0 $ds-spacing-sm;
+  font-family: $ds-font-family;
+}

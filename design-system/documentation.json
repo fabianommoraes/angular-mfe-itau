@@ -1,0 +1,1572 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "AlertComponent",
+            "id": "component-AlertComponent-b7fdbb45f2a3c1f1d4082f59f92261d915aed2949330981e98239be1b1a8f03877da8482860ba5d53a06047545e22fe10d02191db008e2fca9e96cf200d00cdb",
+            "file": "src/app/alert/alert.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ds-alert",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./alert.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "error",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "message",
+                    "defaultValue": "'Ocorreu um erro ao processar sua solicitação. Tente novamente mais tarde.'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "errorChange",
+                    "defaultValue": "new EventEmitter<boolean>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "closeAlert",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 16,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, EventEmitter, Input, Output } from '@angular/core';\n\n@Component({\n  selector: 'ds-alert',\n  templateUrl: './alert.html',\n  styleUrl: './alert.scss',\n  standalone: false,\n})\nexport class AlertComponent {\n  @Input() message: string =\n    'Ocorreu um erro ao processar sua solicitação. Tente novamente mais tarde.';\n\n  @Input() error: boolean = false;\n  @Output() errorChange = new EventEmitter<boolean>();\n\n  closeAlert() {\n    this.errorChange.emit(false);\n  }\n}\n",
+            "styleUrl": "./alert.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"ds-alert ds-alert--error ds-alert-global\" role=\"alert\">\n  <div class=\"ds-alert__icon\" aria-hidden=\"true\">\n    <svg width=\"28\" height=\"28\" viewBox=\"0 0 28 28\">\n      <circle cx=\"14\" cy=\"14\" r=\"14\" fill=\"#e32700\" />\n      <rect x=\"13\" y=\"7\" width=\"2\" height=\"9\" rx=\"1\" fill=\"#fff\" />\n      <rect x=\"13\" y=\"18\" width=\"2\" height=\"2\" rx=\"1\" fill=\"#fff\" />\n    </svg>\n  </div>\n  <div class=\"ds-alert__content\">\n    <span class=\"ds-alert__title\">Erro no servidor</span>\n    <span class=\"ds-alert__message\">{{ message }}</span>\n  </div>\n  <button\n    type=\"button\"\n    class=\"ds-alert__close\"\n    (click)=\"closeAlert()\"\n    aria-label=\"Fechar alerta\"\n  >\n    <svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\">\n      <line\n        x1=\"5\"\n        y1=\"5\"\n        x2=\"15\"\n        y2=\"15\"\n        stroke=\"#212121\"\n        stroke-width=\"2\"\n        stroke-linecap=\"round\"\n      />\n      <line\n        x1=\"15\"\n        y1=\"5\"\n        x2=\"5\"\n        y2=\"15\"\n        stroke=\"#212121\"\n        stroke-width=\"2\"\n        stroke-linecap=\"round\"\n      />\n    </svg>\n  </button>\n</div>\n"
+        },
+        {
+            "name": "App",
+            "id": "component-App-bc6a83f06bea5a92bf25b6d683c531890e55fbdce905bfa2444c6a6ed91fec9f6695349fc04b38d7fe7f6a8b61b2b99b3da2bd6b2dd0ad0ad0168b8beb1acda0",
+            "file": "src/app/app.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./app.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "form",
+                    "defaultValue": "new FormGroup({\n    name: new FormControl('', [Validators.required, Validators.minLength(3)]),\n    choice: new FormControl('', Validators.required),\n  })",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 18
+                },
+                {
+                    "name": "radioOptions",
+                    "defaultValue": "[\n    { label: 'Option A', value: 'A' },\n    { label: 'Option B', value: 'B' },\n    { label: 'Option C', value: 'C' },\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 24
+                },
+                {
+                    "name": "submitted",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 22
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "getChoiceError",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "\"\" | \"You must choose an option\"",
+                    "typeParameters": [],
+                    "line": 44,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "getNameError",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "\"Name is required\" | \"Name must be at least 3 characters\" | \"\"",
+                    "typeParameters": [],
+                    "line": 37,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onSubmit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 49,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "ReactiveFormsModule",
+                    "type": "module"
+                },
+                {
+                    "name": "InputModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport {\n  ReactiveFormsModule,\n  FormGroup,\n  FormControl,\n  Validators,\n} from '@angular/forms';\nimport { InputModule } from './input/input.module';\n\n@Component({\n  selector: 'app-root',\n  standalone: true,\n  imports: [ReactiveFormsModule, InputModule],\n  templateUrl: './app.html',\n  styleUrl: './app.scss',\n})\nexport class App {\n  form = new FormGroup({\n    name: new FormControl('', [Validators.required, Validators.minLength(3)]),\n    choice: new FormControl('', Validators.required),\n  });\n  submitted = false;\n\n  radioOptions = [\n    { label: 'Option A', value: 'A' },\n    { label: 'Option B', value: 'B' },\n    { label: 'Option C', value: 'C' },\n  ];\n\n  get name() {\n    return this.form.get('name')!;\n  }\n  get choice() {\n    return this.form.get('choice')!;\n  }\n\n  getNameError() {\n    if (this.name.hasError('required')) return 'Name is required';\n    if (this.name.hasError('minlength'))\n      return 'Name must be at least 3 characters';\n    return '';\n  }\n\n  getChoiceError() {\n    if (this.choice.hasError('required')) return 'You must choose an option';\n    return '';\n  }\n\n  onSubmit() {\n    this.submitted = true;\n  }\n}\n",
+            "styleUrl": "./app.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "accessors": {
+                "name": {
+                    "name": "name",
+                    "getSignature": {
+                        "name": "name",
+                        "type": "",
+                        "returnType": "",
+                        "line": 30
+                    }
+                },
+                "choice": {
+                    "name": "choice",
+                    "getSignature": {
+                        "name": "choice",
+                        "type": "",
+                        "returnType": "",
+                        "line": 33
+                    }
+                }
+            },
+            "templateData": "<!-- <main>\n  <ds-typography text=\"Título Principal\" tag=\"h1\" size=\"xl\" weight=\"bold\" />\n  >\n  <ds-typography text=\"Subtítulo\" tag=\"h2\" size=\"lg\" weight=\"bold\" />\n  <ds-typography text=\"Texto do parágrafo\" tag=\"p\" size=\"md\" weight=\"normal\" />\n  <ds-typography text=\"Texto pequeno\" tag=\"span\" size=\"sm\" weight=\"normal\" />\n\n  <form [formGroup]=\"form\" (ngSubmit)=\"onSubmit()\">\n    <ds-input\n      label=\"Name\"\n      type=\"text\"\n      placeholder=\"Enter your name\"\n      formControlName=\"name\"\n      [invalid]=\"name.invalid && name.touched\"\n      [errorMessage]=\"getNameError()\"\n    ></ds-input>\n    @if (submitted) {\n    <div><strong>Form Value:</strong> {{ form.value }}</div>\n    }\n\n    <ds-radiobutton\n      label=\"Choose an option\"\n      [options]=\"radioOptions\"\n      name=\"choice\"\n      formControlName=\"choice\"\n      [invalid]=\"choice.invalid && choice.touched\"\n      [errorMessage]=\"getChoiceError()\"\n    >\n    </ds-radiobutton>\n\n    <ds-button text=\"Button\" tag=\"button\" type=\"button\" type=\"submit\" />\n\n    <ds-button text=\"Link\" tag=\"a\" variant=\"secondary\" />\n  </form>\n</main> -->\n"
+        },
+        {
+            "name": "BackdropComponent",
+            "id": "component-BackdropComponent-2fcf811aa2bf2f8e8eae7e753065c255999c6761d65e801084158784e89d948bf8cc8389f57e9aa6b9b665307e184b78ccdcb373dd4bcb5c24fbdc6c0e0afa0b",
+            "file": "src/app/backdrop/backdrop.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-backdrop",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./backdrop.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-backdrop',\n  templateUrl: './backdrop.html',\n  styleUrl: './backdrop.scss',\n  standalone: false,\n})\nexport class BackdropComponent {}\n",
+            "styleUrl": "./backdrop.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"backdrop\">\n  <div class=\"loader\"></div>\n</div>\n"
+        },
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-d0613b4f13b0f3b87947e29349135594106666592374ee067751844339450ae81c8cfe40b07b6784bd9806c79e7641127e05c03915c2517388aff96e826099e9",
+            "file": "src/app/button/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "host": {},
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ds-button",
+            "styleUrls": [
+                "./button.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./button.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "href",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'medium'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "\"small\" | \"medium\" | \"large\"",
+                    "decorators": []
+                },
+                {
+                    "name": "tag",
+                    "defaultValue": "'button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "\"button\" | \"a\"",
+                    "decorators": []
+                },
+                {
+                    "name": "text",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "'button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "variant",
+                    "defaultValue": "'primary'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "\"primary\" | \"secondary\" | \"special\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'ds-button',\n  templateUrl: './button.html',\n  styleUrls: ['./button.scss'],\n  host: { 'data-mf-id': 'remote' },\n  standalone: false,\n})\nexport class ButtonComponent {\n  @Input() text: string = '';\n  @Input() tag: 'button' | 'a' = 'button';\n  @Input() type: string = 'button';\n  @Input() href?: string;\n  @Input() disabled: boolean = false;\n  @Input() variant: 'primary' | 'secondary' | 'special' = 'primary';\n  @Input() size: 'small' | 'medium' | 'large' = 'medium';\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import \"../../styles.scss\";\n\n.custom-btn {\n  display: inline-block;\n  min-width: 96px; // 8px * 12 for consistency\n  padding: $ds-spacing-sm $ds-spacing-lg;\n  font-family: $ds-font-family;\n  font-size: $ds-font-size-md;\n  font-weight: $ds-font-weight-bold;\n  border: none;\n  border-radius: 12px;\n  box-shadow: 0 2px 8px rgba($ds-dark, 0.06);\n  cursor: pointer;\n  transition: background 0.2s, box-shadow 0.2s, color 0.2s, border 0.2s;\n  text-decoration: none;\n\n  &.medium {\n    font-size: $ds-font-size-md;\n    padding: $ds-spacing-sm $ds-spacing-lg;\n  }\n\n  &.small {\n    font-size: $ds-font-size-sm;\n    padding: $ds-spacing-xs $ds-spacing-md;\n  }\n\n  &.large {\n    font-size: $ds-font-size-lg;\n    padding: $ds-spacing-md $ds-spacing-xl;\n  }\n\n  &.primary {\n    background: $ds-primary;\n    color: $ds-white;\n    border: 1px solid $ds-primary;\n\n    &:hover:not([disabled]) {\n      background: darken($ds-primary, 8%);\n      box-shadow: 0 4px 16px rgba($ds-dark, 0.1);\n    }\n    &:active:not([disabled]) {\n      background: darken($ds-primary, 16%);\n    }\n    &:disabled {\n      background: $ds-gray;\n      color: $ds-dark;\n      cursor: not-allowed;\n      box-shadow: none;\n      opacity: 0.7;\n    }\n  }\n\n  &.special {\n    background: $ds-primary;\n    color: $ds-white;\n    border: 1px solid $ds-white;\n\n    &:hover:not([disabled]) {\n      background: $ds-white;\n      color: $ds-primary;\n      box-shadow: 0 4px 16px rgba($ds-dark, 0.1);\n    }\n    &:active:not([disabled]) {\n      background: darken($ds-primary, 16%);\n    }\n    &:disabled {\n      background: $ds-gray;\n      color: $ds-dark;\n      cursor: not-allowed;\n      box-shadow: none;\n      opacity: 0.7;\n    }\n  }\n\n  &.secondary {\n    background: $ds-white;\n    color: $ds-primary;\n    border: 1px solid $ds-primary;\n\n    &:hover:not([disabled]) {\n      background: $ds-light;\n      color: darken($ds-primary, 8%);\n      border-color: darken($ds-primary, 8%);\n      box-shadow: 0 4px 16px rgba($ds-dark, 0.1);\n    }\n    &:active:not([disabled]) {\n      background: $ds-gray;\n      color: darken($ds-primary, 16%);\n      border-color: darken($ds-primary, 16%);\n    }\n    &:disabled {\n      background: $ds-gray;\n      color: $ds-dark;\n      border-color: $ds-border;\n      cursor: not-allowed;\n      box-shadow: none;\n      opacity: 0.7;\n    }\n  }\n}\n",
+                    "styleUrl": "./button.scss"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "@if (tag === 'button') {\n<button\n  class=\"custom-btn\"\n  [type]=\"type\"\n  [ngClass]=\"[variant, size]\"\n  [disabled]=\"disabled\"\n>\n  {{ text }}\n</button>\n} @if (tag === 'a') {\n<a\n  class=\"custom-btn\"\n  [routerLink]=\"href\"\n  [type]=\"type\"\n  [ngClass]=\"[variant, size]\"\n>\n  {{ text }}\n</a>\n}\n"
+        },
+        {
+            "name": "InputComponent",
+            "id": "component-InputComponent-ff29028e62f15ff5bbd2a9a79de6c3f828a8661c098313a79b133de1742940ae769cde56b1ac1e6d46abbbb08dcf0c62f288c755e24c96cb087f6cd8fcf1078d",
+            "file": "src/app/input/input.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [
+                {
+                    "name": "{\n    provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => InputComponent), multi: true,\n}",
+                    "type": "component"
+                }
+            ],
+            "selector": "ds-input",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./input.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "disabled",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 23,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "errorMessage",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 21,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "invalid",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 22,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "placeholder",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 19,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "'text'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 20,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "onChange",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 27
+                },
+                {
+                    "name": "onTouched",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 28
+                },
+                {
+                    "name": "value",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 25
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "onInput",
+                    "args": [
+                        {
+                            "name": "val",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 30,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "val",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "registerOnChange",
+                    "args": [
+                        {
+                            "name": "fn",
+                            "type": "function",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "function": [
+                                {
+                                    "name": "_",
+                                    "type": "any",
+                                    "deprecated": false,
+                                    "deprecationMessage": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 38,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "fn",
+                            "type": "function",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "function": [
+                                {
+                                    "name": "_",
+                                    "type": "any",
+                                    "deprecated": false,
+                                    "deprecationMessage": ""
+                                }
+                            ],
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "registerOnTouched",
+                    "args": [
+                        {
+                            "name": "fn",
+                            "type": "function",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "function": []
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 41,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "fn",
+                            "type": "function",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "function": [],
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "writeValue",
+                    "args": [
+                        {
+                            "name": "value",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 35,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "value",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, forwardRef } from '@angular/core';\nimport { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';\n\n@Component({\n  selector: 'ds-input',\n  standalone: false,\n  templateUrl: './input.html',\n  styleUrl: './input.scss',\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      useExisting: forwardRef(() => InputComponent),\n      multi: true,\n    },\n  ],\n})\nexport class InputComponent implements ControlValueAccessor {\n  @Input() label?: string;\n  @Input() placeholder?: string;\n  @Input() type: string = 'text';\n  @Input() errorMessage?: string;\n  @Input() invalid: boolean = false;\n  @Input() disabled: boolean = false;\n\n  value: string = '';\n\n  onChange = (_: any) => {};\n  onTouched = () => {};\n\n  onInput(val: string) {\n    this.value = val || '';\n    this.onChange(val);\n  }\n\n  writeValue(value: string): void {\n    this.value = value ?? '';\n  }\n  registerOnChange(fn: (_: any) => void): void {\n    this.onChange = fn;\n  }\n  registerOnTouched(fn: () => void): void {\n    this.onTouched = fn;\n  }\n}\n",
+            "styleUrl": "./input.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "implements": [
+                "ControlValueAccessor"
+            ],
+            "templateData": "@if (label) {\n<label class=\"custom-input-label\">{{ label }}</label>\n}\n<input\n  [type]=\"type\"\n  [value]=\"value\"\n  (input)=\"onInput($event.target.value)\"\n  [placeholder]=\"placeholder\"\n  [disabled]=\"disabled\"\n  [class.invalid]=\"invalid\"\n  class=\"custom-input\"\n  (blur)=\"onTouched()\"\n/>\n@if (invalid && errorMessage) {\n<div class=\"custom-input-error\">{{ errorMessage }}</div>\n}\n"
+        },
+        {
+            "name": "NotFoundComponent",
+            "id": "component-NotFoundComponent-7718c572c355b99b7cd7ad693290a020d21b0797ad4d0e721783995568c67f77a282bbff1f1a0c43a6bc8156aef654c800b73608ac68f44892815029bb1bfa76",
+            "file": "src/app/notfound/notfound.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-notfound",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./notfound.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-notfound',\n  templateUrl: './notfound.html',\n  styleUrl: './notfound.scss',\n  standalone: false,\n})\nexport class NotFoundComponent {}\n",
+            "styleUrl": "./notfound.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"ds-not-found\">\n  <div class=\"ds-not-found__icon\" aria-hidden=\"true\">\n    <ds-typography\n      text=\"404\"\n      tag=\"h1\"\n      weight=\"bold\"\n      size=\"xl\"\n      color=\"primary\"\n    />\n  </div>\n  <ds-typography\n    text=\"Página não encontrada\"\n    tag=\"h2\"\n    weight=\"bold\"\n    size=\"xl\"\n  />\n  <div>\n    <ds-typography\n      text=\"Desculpe, não conseguimos encontrar o que você procura.\"\n    />\n\n    <ds-typography\n      text=\"Verifique se o endereço está correto ou volte para a página inicial.\"\n    />\n  </div>\n  <ds-button text=\"Voltar\" tag=\"a\" href=\"/\" size=\"large\" />\n</div>\n"
+        },
+        {
+            "name": "RadioButtonComponent",
+            "id": "component-RadioButtonComponent-f3cb20d59b7361c6b4698cc63a2f668d00bb8227ace773aa79413d85e66a1f013f815df0db53cf46b439189d297c3a628d575c72c0a2226a0330128d153601cb",
+            "file": "src/app/radiobutton/radiobutton.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [
+                {
+                    "name": "{\n    provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => RadioButtonComponent), multi: true,\n}",
+                    "type": "component"
+                }
+            ],
+            "selector": "ds-radiobutton",
+            "styleUrls": [
+                "./radiobutton.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./radiobutton.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 19,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 20,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "options",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "literal type[]",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "onChange",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 24
+                },
+                {
+                    "name": "onTouched",
+                    "defaultValue": "() => {...}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 25
+                },
+                {
+                    "name": "value",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 22
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "registerOnChange",
+                    "args": [
+                        {
+                            "name": "fn",
+                            "type": "function",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "function": [
+                                {
+                                    "name": "_",
+                                    "type": "any",
+                                    "deprecated": false,
+                                    "deprecationMessage": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 36,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "fn",
+                            "type": "function",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "function": [
+                                {
+                                    "name": "_",
+                                    "type": "any",
+                                    "deprecated": false,
+                                    "deprecationMessage": ""
+                                }
+                            ],
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "registerOnTouched",
+                    "args": [
+                        {
+                            "name": "fn",
+                            "type": "function",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "function": []
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 39,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "fn",
+                            "type": "function",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "function": [],
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "select",
+                    "args": [
+                        {
+                            "name": "val",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 27,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "val",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "writeValue",
+                    "args": [
+                        {
+                            "name": "value",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 33,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "value",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, forwardRef } from '@angular/core';\nimport { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';\n\n@Component({\n  selector: 'ds-radiobutton',\n  standalone: false,\n  templateUrl: './radiobutton.html',\n  styleUrls: ['./radiobutton.scss'],\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      useExisting: forwardRef(() => RadioButtonComponent),\n      multi: true,\n    },\n  ],\n})\nexport class RadioButtonComponent implements ControlValueAccessor {\n  @Input() options: { label: string; value: string }[] = [];\n  @Input() label?: string;\n  @Input() name?: string;\n\n  value: string = '';\n\n  onChange = (_: any) => {};\n  onTouched = () => {};\n\n  select(val: string) {\n    this.value = val;\n    this.onChange(val);\n    this.onTouched();\n  }\n\n  writeValue(value: string): void {\n    this.value = value ?? '';\n  }\n  registerOnChange(fn: (_: any) => void): void {\n    this.onChange = fn;\n  }\n  registerOnTouched(fn: () => void): void {\n    this.onTouched = fn;\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import \"../../styles.scss\";\n\n.radio-group {\n  display: flex;\n  gap: $ds-spacing-lg; // 24px spacing between options\n  margin-bottom: $ds-spacing-sm;\n}\n\n.custom-radio-label {\n  display: block;\n  font-family: $ds-font-family;\n  font-size: $ds-font-size-md;\n  font-weight: $ds-font-weight-bold;\n  margin-bottom: $ds-spacing-sm;\n  color: $ds-dark;\n}\n\n.radio-option {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: $ds-spacing-sm; // 8px between radio and label\n  font-size: $ds-font-size-md;\n  font-family: $ds-font-family;\n  cursor: pointer;\n  position: relative;\n  min-height: 32px; // 4x8px for touch target\n}\n\n.custom-radio-input {\n  opacity: 0;\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 32px;\n  height: 32px;\n  margin: 0;\n  z-index: 2;\n  cursor: pointer;\n}\n\n.custom-radio-custom {\n  width: 24px;\n  height: 24px;\n  border-radius: 50%;\n  border: 2px solid $ds-primary;\n  background: $ds-white;\n  box-shadow: 0 2px 8px rgba($ds-dark, 0.06);\n  display: inline-block;\n  position: relative;\n  transition: border-color 0.2s, box-shadow 0.2s;\n\n  // Checked state\n  .custom-radio-input:checked + & {\n    border-color: $ds-primary;\n    box-shadow: 0 0 0 4px rgba($ds-primary, 0.12);\n  }\n\n  // Focus state\n  .custom-radio-input:focus + & {\n    border-color: darken($ds-primary, 8%);\n    box-shadow: 0 0 0 4px rgba($ds-primary, 0.24);\n    outline: none;\n  }\n\n  // Disabled state\n  .custom-radio-input:disabled + & {\n    border-color: $ds-gray;\n    background: $ds-gray;\n    cursor: not-allowed;\n    opacity: 0.7;\n  }\n\n  // Inner dot\n  &::after {\n    content: \"\";\n    display: block;\n    width: 12px;\n    height: 12px;\n    border-radius: 50%;\n    background: $ds-primary;\n    position: absolute;\n    top: 4px;\n    left: 4px;\n    opacity: 0;\n    transition: opacity 0.2s;\n  }\n  .custom-radio-input:checked + &::after {\n    opacity: 1;\n  }\n}\n\n.custom-radio-text {\n  color: $ds-dark;\n  font-size: $ds-font-size-md;\n  font-weight: $ds-font-weight-normal;\n  font-family: $ds-font-family;\n\n  margin-top: 3px;\n}\n\n.radio-group.invalid .custom-radio-custom {\n  border-color: red;\n  box-shadow: 0 0 0 2px rgba(red, 0.12);\n}\n\n.text-danger {\n  color: red;\n  font-size: $ds-font-size-sm;\n  margin-top: $ds-spacing-xs;\n  font-family: $ds-font-family;\n}\n",
+                    "styleUrl": "./radiobutton.scss"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "implements": [
+                "ControlValueAccessor"
+            ],
+            "templateData": "@if (label) {\n<label class=\"custom-radio-label\">{{ label }}</label>\n}\n<div class=\"radio-group\">\n  @for (option of options; track option.value) {\n  <label class=\"radio-option\">\n    <input\n      type=\"radio\"\n      [name]=\"name\"\n      [value]=\"option.value\"\n      [checked]=\"value === option.value\"\n      (change)=\"select(option.value)\"\n      class=\"custom-radio-input\"\n    />\n    <span class=\"custom-radio-custom\"></span>\n    <span class=\"custom-radio-text\">{{ option.label }}</span>\n  </label>\n  }\n</div>\n"
+        },
+        {
+            "name": "SkeletonComponent",
+            "id": "component-SkeletonComponent-a8e6066bba1d68d68061d3d729724a0dfa615c5ec29bc3331f83337299a60e766dfdc7fc58b3790017f071d16b0032ce09b3e5bc5b93e305cb8a661d8a6aa76a",
+            "file": "src/app/skeleton/skeleton.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ds-skeleton",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./skeleton.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "borderRadius",
+                    "defaultValue": "'4px'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "height",
+                    "defaultValue": "'16px'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "marginBottom",
+                    "defaultValue": "'8px'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "width",
+                    "defaultValue": "'100%'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'ds-skeleton',\n  templateUrl: './skeleton.html',\n  styleUrl: './skeleton.scss',\n  standalone: false,\n})\nexport class SkeletonComponent {\n  @Input() width: string = '100%';\n  @Input() height: string = '16px';\n  @Input() borderRadius: string = '4px';\n  @Input() marginBottom: string = '8px';\n}\n",
+            "styleUrl": "./skeleton.scss",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div\n  class=\"skeleton\"\n  [style.width]=\"width\"\n  [style.height]=\"height\"\n  [style.borderRadius]=\"borderRadius\"\n  [style.marginBottom]=\"marginBottom\"\n></div>\n"
+        },
+        {
+            "name": "TypographyComponent",
+            "id": "component-TypographyComponent-b0e7c979ee09fa505f416bae1dc26a1bf4f8995eb14a48f99fc5c25c9818ec5d5ee91540651240bc935adfd4968f1689020f031b9fb1c72a14c244ffd4ffeda7",
+            "file": "src/app/typography/typography.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "ds-typography",
+            "styleUrls": [
+                "./typography.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./typography.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "defaultValue": "'default'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "\"default\" | \"primary\" | \"success\" | \"error\"",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'md'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "\"xs\" | \"sm\" | \"md\" | \"lg\" | \"xl\"",
+                    "decorators": []
+                },
+                {
+                    "name": "tag",
+                    "defaultValue": "'span'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "\"span\" | \"p\" | \"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\" | \"h6\"",
+                    "decorators": []
+                },
+                {
+                    "name": "text",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "weight",
+                    "defaultValue": "'normal'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "\"normal\" | \"bold\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'ds-typography',\n  templateUrl: './typography.html',\n  styleUrls: ['./typography.scss'],\n  standalone: false,\n})\nexport class TypographyComponent {\n  @Input() size: 'xs' | 'sm' | 'md' | 'lg' | 'xl' = 'md';\n  @Input() tag: 'span' | 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' = 'span';\n  @Input() weight: 'normal' | 'bold' = 'normal';\n  @Input() color: 'default' | 'primary' | 'success' | 'error' = 'default';\n  @Input() text: string = '';\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import \"../../styles.scss\";\n\n.typography {\n  font-family: $ds-font-family;\n  color: $ds-dark;\n  font-weight: $ds-font-weight-normal;\n  margin: 0;\n\n  &.xs {\n    font-size: $ds-font-size-xs;\n    line-height: 20px;\n  }\n\n  &.sm {\n    font-size: $ds-font-size-sm;\n    line-height: 24px;\n  }\n\n  &.md {\n    font-size: $ds-font-size-md;\n    line-height: 32px;\n  }\n\n  &.lg {\n    font-size: $ds-font-size-lg;\n    line-height: 40px;\n  }\n\n  &.xl {\n    font-size: $ds-font-size-xl;\n    line-height: 48px;\n  }\n\n  &.bold {\n    font-weight: $ds-font-weight-bold;\n  }\n\n  &.primary {\n    color: $ds-primary;\n  }\n\n  &.success {\n    color: $ds-success;\n  }\n\n  &.error {\n    color: $ds-error;\n  }\n}\n",
+                    "styleUrl": "./typography.scss"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "@if (tag === 'h1') {\n<h1 class=\"typography\" [ngClass]=\"[weight, size, color]\">\n  {{ text }}\n</h1>\n} @if (tag === 'h2') {\n<h2 class=\"typography\" [ngClass]=\"[weight, size, color]\">\n  {{ text }}\n</h2>\n} @if (tag === 'h3') {\n<h3 class=\"typography\" [ngClass]=\"[weight, size, color]\">\n  {{ text }}\n</h3>\n} @if (tag === 'h4') {\n<h4 class=\"typography\" [ngClass]=\"[weight, size, color]\">\n  {{ text }}\n</h4>\n} @if (tag === 'h5') {\n<h5 class=\"typography\" [ngClass]=\"[weight, size, color]\">\n  {{ text }}\n</h5>\n} @if (tag === 'h6') {\n<h6 class=\"typography\" [ngClass]=\"[weight, size, color]\">\n  {{ text }}\n</h6>\n} @if (tag === 'p') {\n<p class=\"typography\" [ngClass]=\"[weight, size, color]\">\n  {{ text }}\n</p>\n} @if (tag === 'span') {\n<span class=\"typography\" [ngClass]=\"[weight, size, color]\">\n  {{ text }}\n</span>\n}\n"
+        }
+    ],
+    "modules": [
+        {
+            "name": "AlertModule",
+            "id": "module-AlertModule-82353896d19aacada260c7277adff2441d2722363bce8138ec23fbe560544cb097a843fe8f13ebbeb6739c389c6b7a51084fec0065f64935939acc6e37303fa9",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/alert/alert.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { AlertComponent } from './alert.component';\n\n@NgModule({\n  declarations: [AlertComponent],\n  exports: [AlertComponent],\n  imports: [],\n})\nexport class AlertModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AlertComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "AlertComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "BackdropModule",
+            "id": "module-BackdropModule-c14612944a1923e360938f1d9f391e3bc3fb05f6d278bc5eeb02dff0efdb50ecc6ab872e929329e458190f4f870cd6400c72f4c810461d5b124ee2da47abcc18",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/backdrop/backdrop.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BackdropComponent } from './backdrop.component';\n\n@NgModule({\n  declarations: [BackdropComponent],\n  exports: [BackdropComponent],\n  imports: [],\n})\nexport class BackdropModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "BackdropComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "BackdropComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "ButtonModule",
+            "id": "module-ButtonModule-06a0aed04fb516f25dd16b8fbd0326f6053305019d2051912220f4f6520253ec6e964247918bb32503debacc13d63fcc0bef0423a9af177b98cb802e3a5a54a0",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/button/button.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterLink } from '@angular/router';\nimport { ButtonComponent } from './button.component';\nimport { CommonModule } from '@angular/common';\n\n@NgModule({\n  declarations: [ButtonComponent],\n  exports: [ButtonComponent],\n  imports: [RouterLink, CommonModule],\n})\nexport class ButtonModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "ButtonComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "RouterLink"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "ButtonComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "InputModule",
+            "id": "module-InputModule-69a4e156c358cf198c5f0d263ce6073dd445882e592f676d850ca0e1c8390a3b12bf77b13a4b6404b217f7f7da35a5d3ca6763117ee49633a7b0e29158780591",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/input/input.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { InputComponent } from './input.component';\nimport { CommonModule } from '@angular/common';\nimport { ReactiveFormsModule } from '@angular/forms';\n\n@NgModule({\n  declarations: [InputComponent],\n  exports: [InputComponent],\n  imports: [CommonModule, ReactiveFormsModule],\n})\nexport class InputModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "InputComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "InputComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "NotFoundModule",
+            "id": "module-NotFoundModule-07755ab5a60ffb07269fef13cac94bc858865551c3514e2365c3f38827a30c17f20719c6128a32c9fe2dd928c9f79183b37d3dac06f76e776ec6a3da9f088981",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/notfound/notfound.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { NotFoundComponent } from './notfound.component';\nimport { TypographyModule } from '../../../../design-system/src/app/typography/typography.module';\nimport { ButtonModule } from '../../../../design-system/src/app/button/button.module';\n\n@NgModule({\n  declarations: [NotFoundComponent],\n  imports: [CommonModule, TypographyModule, ButtonModule],\n  exports: [NotFoundComponent],\n})\nexport class NotFoundModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "NotFoundComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "ButtonModule"
+                        },
+                        {
+                            "name": "TypographyModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "NotFoundComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "RadioButtonModule",
+            "id": "module-RadioButtonModule-667f45eecbc1449acd818f149c2f7e0365fac5bfbe970b8ade7b4dfd59e70dfd7434e250e3d8802c4c9b5ffca157ce1567f9752afffb3dd562ded6bfacd58ae9",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/radiobutton/radiobutton.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RadioButtonComponent } from './radiobutton.component';\n\n@NgModule({\n  declarations: [RadioButtonComponent],\n  exports: [RadioButtonComponent],\n  imports: [],\n})\nexport class RadioButtonModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "RadioButtonComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "RadioButtonComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "SkeletonModule",
+            "id": "module-SkeletonModule-ac09004528fb77b5e2721b7df53e4ac699ec84d63bf35d22f29374f0c70a6c5b76697faf7f7c204d5014df6e690017b9d10cf664c140a0e1f8304251946e1564",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/skeleton/skeleton.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { SkeletonComponent } from './skeleton.component';\nimport { CommonModule } from '@angular/common';\n\n@NgModule({\n  declarations: [SkeletonComponent],\n  exports: [SkeletonComponent],\n  imports: [CommonModule],\n})\nexport class SkeletonModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "SkeletonComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "SkeletonComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "TypographyModule",
+            "id": "module-TypographyModule-df5090ce616550fa480eab1f75d830b772e77f157344b3b7238a2b5a0c392aa2a2a16f005ce86624e0fc7e2e877a9e7861be32ff084ee9bcceb79e544167ecf0",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/typography/typography.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { TypographyComponent } from './typography.component';\n\n@NgModule({\n  declarations: [TypographyComponent],\n  imports: [CommonModule],\n  exports: [TypographyComponent],\n})\nexport class TypographyModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "TypographyComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "TypographyComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "appConfig",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/app.config.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ApplicationConfig",
+                "defaultValue": "{\n  providers: [\n    provideBrowserGlobalErrorListeners(),\n    provideZoneChangeDetection({ eventCoalescing: true }),\n    provideRouter(routes)\n  ]\n}"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/app/app.config.ts": [
+                {
+                    "name": "appConfig",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/app.config.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ApplicationConfig",
+                    "defaultValue": "{\n  providers: [\n    provideBrowserGlobalErrorListeners(),\n    provideZoneChangeDetection({ eventCoalescing: true }),\n    provideRouter(routes)\n  ]\n}"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
+    "routes": [],
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "src/app/alert/alert.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AlertComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.config.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "appConfig",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "App",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/backdrop/backdrop.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "BackdropComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/button/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/input/input.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/14",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/notfound/notfound.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NotFoundComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/radiobutton/radiobutton.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "RadioButtonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/11",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/skeleton/skeleton.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SkeletonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/typography/typography.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TypographyComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            }
+        ]
+    }
+}

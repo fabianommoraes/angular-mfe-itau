@@ -1,0 +1,38 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "João",
+      "email": "joao@email.com"
+    },
+    {
+      "id": "2",
+      "name": "Maria",
+      "email": "maria@email.com"
+    },
+    {
+      "id": "c58d",
+      "name": "2 2",
+      "email": "fabiano.m.moraes@gmail.com",
+      "choice": "URL Params"
+    },
+    {
+      "id": "740c",
+      "name": "2 2",
+      "email": "fabiano.m.moraes@gmail.com",
+      "choice": "URL Params"
+    },
+    {
+      "id": "83c5",
+      "name": "asdfas",
+      "email": "fabiano.m.moraes@gmail.com",
+      "choice": "URL Params"
+    },
+    {
+      "id": "ba46",
+      "name": "gfgdfg",
+      "email": "fabiano.m.moraes@gmail.com",
+      "choice": "API"
+    }
+  ]
+}

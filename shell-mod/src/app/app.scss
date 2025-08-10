@@ -1,0 +1,15 @@
+@import "../styles.scss";
+
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: $ds-white;
+}
+
+@media (min-width: 700px) {
+  .app-layout {
+    background: $ds-light;
+  }
+}

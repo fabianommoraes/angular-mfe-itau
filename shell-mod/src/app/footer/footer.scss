@@ -1,0 +1,25 @@
+@import "../../../../design-system/src/styles.scss";
+
+.shell-footer {
+  width: 100%;
+  background: $ds-white;
+  padding: $ds-spacing-lg 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $ds-font-family;
+  font-size: $ds-font-size-md;
+  color: $ds-dark;
+  font-weight: $ds-font-weight-normal;
+  letter-spacing: 0.05em;
+  box-shadow: 0 -2px 8px rgba($ds-primary, 0.05);
+}
+
+@media (min-width: 700px) {
+  .shell-footer {
+    padding: $ds-spacing-lg;
+    justify-content: end;
+    font-size: $ds-font-size-md;
+    border-top: 2px solid $ds-primary;
+  }
+}

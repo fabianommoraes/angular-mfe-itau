@@ -1,0 +1,49 @@
+@import "../../styles.scss";
+
+.typography {
+  font-family: $ds-font-family;
+  color: $ds-dark;
+  font-weight: $ds-font-weight-normal;
+  margin: 0;
+
+  &.xs {
+    font-size: $ds-font-size-xs;
+    line-height: 20px;
+  }
+
+  &.sm {
+    font-size: $ds-font-size-sm;
+    line-height: 24px;
+  }
+
+  &.md {
+    font-size: $ds-font-size-md;
+    line-height: 32px;
+  }
+
+  &.lg {
+    font-size: $ds-font-size-lg;
+    line-height: 40px;
+  }
+
+  &.xl {
+    font-size: $ds-font-size-xl;
+    line-height: 48px;
+  }
+
+  &.bold {
+    font-weight: $ds-font-weight-bold;
+  }
+
+  &.primary {
+    color: $ds-primary;
+  }
+
+  &.success {
+    color: $ds-success;
+  }
+
+  &.error {
+    color: $ds-error;
+  }
+}

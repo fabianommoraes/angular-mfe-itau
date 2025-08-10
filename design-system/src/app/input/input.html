@@ -1,0 +1,19 @@
+@if (label) {
+<label class="custom-input-label" [for]="id">{{ label }}</label>
+}
+<input
+  [id]="id"
+  [type]="type"
+  [value]="value"
+  (input)="onInput($event.target.value)"
+  [placeholder]="placeholder"
+  [disabled]="disabled"
+  [class.invalid]="invalid"
+  [attr.aria-invalid]="invalid ? 'true' : null"
+  [attr.aria-describedby]="invalid && errorMessage ? id + '-error' : null"
+  class="custom-input"
+  (blur)="onTouched()"
+/>
+@if (invalid && errorMessage) {
+<div class="custom-input-error" [id]="id + '-error'">{{ errorMessage }}</div>
+}

@@ -1,0 +1,18 @@
+@import "../../../../design-system/src/styles.scss";
+
+.skeleton {
+  background: linear-gradient(90deg, #ececec 25%, #f7f6f4 37%, #ececec 63%);
+  background-size: 400% 100%;
+  animation: skeleton-loading 1.4s ease infinite;
+  display: block;
+  position: relative;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}

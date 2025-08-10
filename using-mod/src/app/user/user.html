@@ -1,0 +1,60 @@
+<main class="itau-form-shell">
+  <section class="itau-form-header">
+    <ds-typography text="Cadastro" tag="h1" size="xl" weight="bold" />
+  </section>
+
+  <form class="itau-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="itau-form-columns">
+      <div class="itau-form-left">
+        <div class="itau-form-group">
+          <ds-input
+            id="name"
+            label="Nome"
+            type="text"
+            placeholder="Digite seu nome"
+            formControlName="name"
+            [invalid]="name.invalid && name.touched"
+            [errorMessage]="getNameError()"
+          />
+        </div>
+
+        <div class="itau-form-group">
+          <ds-input
+            id="email"
+            label="E-mail"
+            type="text"
+            placeholder="Digite seu e-mail"
+            formControlName="email"
+            [invalid]="email.invalid && email.touched"
+            [errorMessage]="getEmailError()"
+          />
+        </div>
+
+        <div class="itau-form-group">
+          <div class="itau-radio-group">
+            <ds-radiobutton
+              [options]="radioOptions"
+              name="choice"
+              formControlName="choice"
+              label="Forma de comunicação entre MFEs"
+            >
+            </ds-radiobutton>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="itau-form-actions">
+      <ds-button
+        text="Cadastrar"
+        tag="button"
+        [disabled]="form.invalid"
+        type="submit"
+        size="large"
+      />
+    </div>
+  </form>
+</main>
+
+@if(error) { <ds-alert (errorChange)="error = $event" /> } @if(loading) {
+<app-backdrop />
+}

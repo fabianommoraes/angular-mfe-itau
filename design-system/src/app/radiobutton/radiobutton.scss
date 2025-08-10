@@ -1,0 +1,118 @@
+@import "../../styles.scss";
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: $ds-spacing-sm;
+  margin-bottom: $ds-spacing-sm;
+  border: none;
+}
+
+.custom-radio-label {
+  display: block;
+  font-family: $ds-font-family;
+  font-size: $ds-font-size-md;
+  font-weight: $ds-font-weight-bold;
+  margin-bottom: $ds-spacing-lg;
+  color: $ds-dark;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $ds-spacing-sm;
+  font-size: $ds-font-size-md;
+  font-family: $ds-font-family;
+  cursor: pointer;
+  position: relative;
+  min-height: 32px;
+}
+
+.custom-radio-input {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.custom-radio-custom {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid $ds-primary;
+  background: $ds-white;
+  box-shadow: 0 2px 8px rgba($ds-dark, 0.06);
+  display: inline-block;
+  position: relative;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  .custom-radio-input:checked + & {
+    border-color: $ds-primary;
+    box-shadow: 0 0 0 4px rgba($ds-primary, 0.12);
+  }
+
+  .custom-radio-input:focus + & {
+    border-color: $ds-dark;
+    box-shadow: 0 0 0 4px rgba($ds-primary, 0.24);
+    outline: none;
+  }
+
+  .custom-radio-input:disabled + & {
+    border-color: $ds-gray;
+    background: $ds-gray;
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: $ds-primary;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  .custom-radio-input:checked + &::after {
+    opacity: 1;
+  }
+}
+
+.custom-radio-text {
+  color: $ds-dark;
+  font-size: $ds-font-size-md;
+  font-weight: $ds-font-weight-normal;
+  font-family: $ds-font-family;
+  margin-top: 3px;
+}
+
+.radio-group.invalid .custom-radio-custom {
+  border-color: red;
+  box-shadow: 0 0 0 2px rgba(red, 0.12);
+}
+
+.text-danger {
+  color: red;
+  font-size: $ds-font-size-sm;
+  margin-top: $ds-spacing-xs;
+  font-family: $ds-font-family;
+}
+
+@media (min-width: 700px) {
+  .radio-group {
+    flex-direction: row;
+    gap: $ds-spacing-lg;
+  }
+}

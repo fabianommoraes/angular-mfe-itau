@@ -1,0 +1,22 @@
+@if (tag === 'button') {
+<button
+  class="custom-btn"
+  [type]="type"
+  [ngClass]="[variant, size]"
+  [disabled]="disabled"
+  [attr.aria-disabled]="disabled ? 'true' : null"
+>
+  {{ text }}
+</button>
+} @if (tag === 'a') {
+<a
+  class="custom-btn"
+  [routerLink]="href"
+  [ngClass]="[variant, size]"
+  [attr.aria-disabled]="disabled ? 'true' : null"
+  [attr.role]="disabled ? 'button' : null"
+  [attr.tabindex]="disabled ? '-1' : null"
+>
+  {{ text }}
+</a>
+}

@@ -1,0 +1,122 @@
+@import "../../styles.scss";
+
+.ds-alert {
+  display: flex;
+  align-items: flex-start;
+  padding: $ds-spacing-lg $ds-spacing-md;
+  background: $ds-error-bg;
+  border: 1px solid $ds-error;
+  border-radius: $ds-spacing-sm;
+  font-family: $ds-font-family;
+  gap: $ds-spacing-sm;
+  box-shadow: 0 2px 8px rgba($ds-error, 0.08);
+  position: relative;
+  font-size: $ds-font-size-lg;
+  width: 100%;
+
+  &__icon {
+    flex-shrink: 0;
+    margin-right: $ds-spacing-sm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $ds-spacing-xs;
+    min-width: 0;
+  }
+
+  &__title {
+    color: $ds-error;
+    font-size: $ds-font-size-lg;
+    font-weight: $ds-font-weight-bold;
+    margin-bottom: $ds-spacing-xs;
+    font-family: $ds-font-family;
+  }
+
+  &__message {
+    color: $ds-dark;
+    font-size: $ds-font-size-md;
+    font-weight: $ds-font-weight-normal;
+    font-family: $ds-font-family;
+    word-break: break-word;
+  }
+
+  &__close {
+    position: absolute;
+    top: $ds-spacing-sm;
+    right: $ds-spacing-sm;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: $ds-spacing-xs;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      display: block;
+    }
+
+    &:hover svg line {
+      stroke: $ds-primary;
+    }
+  }
+}
+
+.ds-alert-global {
+  position: fixed;
+  left: 50%;
+  bottom: $ds-spacing-lg;
+  transform: translateX(-50%) translateY(100px);
+  z-index: 9999;
+  min-width: 0;
+  max-width: 98vw;
+  animation: ds-alert-slide-up 0.7s cubic-bezier(0.37, 0.13, 0.52, 1.27)
+    forwards;
+}
+
+@keyframes ds-alert-slide-up {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@media (min-width: 600px) {
+  .ds-alert {
+    flex-direction: row;
+    padding: $ds-spacing-lg;
+    font-size: $ds-font-size-md;
+    border-radius: $ds-spacing-md;
+
+    &__icon {
+      width: 36px;
+      height: 36px;
+      margin-right: $ds-spacing-md;
+    }
+
+    &__title {
+      font-size: $ds-font-size-lg;
+    }
+
+    &__message {
+      font-size: $ds-font-size-md;
+    }
+  }
+
+  .ds-alert-global {
+    min-width: 320px;
+    max-width: 90vw;
+    bottom: $ds-spacing-xl;
+  }
+}
