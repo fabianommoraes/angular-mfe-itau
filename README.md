@@ -59,6 +59,7 @@ O DS não precisa ser executado para o projeto funcionar.
 
 Host da aplicação. Contém as rotas e carrega dinamicamente os Remotes. 
 Possui uma página home (`http://localhost:4200/`) com componentes internos (não é carregado um Remote).
+Possui um `json-server` para o mock do backend.
 
 - `using-mod/`
 
