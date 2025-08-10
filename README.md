@@ -47,6 +47,8 @@ Para acessar os componentes:
 
 `npm run storybook`
 
+Acesse `http://localhost:6006/`
+
 **Observação**: Mantenha as pastas no mesmo diretório para que possam importar o componentes do DS.
 O DS não precisa ser executado para o projeto funcionar.
 
