@@ -1,4 +1,4 @@
-name: Sucess Push Workflow
+name: Sucess Push
 
 on:
   push:
