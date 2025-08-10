@@ -79,6 +79,7 @@ Este projeto possui uma pequena biblioteca de componentes que simula um DS e um 
 ### Acessibilidade e Usabilidade
 
 É possível se Cadastrar utilizando a navegação por tab. Foram considerados aspectos de acessibilidade para funcionar melhor com leitores de tela.
+Também foi desenvolvido para aplicações móveis.
 
 [Gravação de tela de 2025-08-10 03-44-45.webm](https://github.com/user-attachments/assets/be4bb7b3-8e95-487a-8050-662ea37874b3)
 
