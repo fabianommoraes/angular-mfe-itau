@@ -58,13 +58,22 @@ Graças ao **Module Federation**, também é possível que o Host consuma os Rem
 
 <img width="939" height="960" alt="Captura de tela de 2025-08-10 03-28-51" src="https://github.com/user-attachments/assets/1d040836-7896-4568-9980-0acae6fde205" />
 
-### Storybook e Desing System
+### Storybook e Design System
 
 A arquitetura de MFEs praticamente pede a implementação de um Design System. O DS permite que os componentes sejam compartilhados tornando a interface coesa e contribuindo para a experiência do usuário.
 
 Este projeto possui uma pequena biblioteca de componentes que simula um DS e um sandbox no Storybook
 
 [Gravação de tela de 2025-08-10 03-35-51.webm](https://github.com/user-attachments/assets/13281eb0-b35b-40c6-be34-70844a346b97)
+
+## Acessibilidade
+
+Todos os componentes foram desenvolvidos para serem acessíveis. Atributos, *outlines*, etiquetas (*labels*), identificadores e uso correto das tags HTML foram implementados para facilitar o uso de leitores de tela e a navegação pelo teclado (via tecla *tab*).
+
+É possível se cadastrar e visualizar os resultados utilizando apenas o teclado.
+
+[Gravação de tela de 2025-08-10 03-44-45.webm](https://github.com/user-attachments/assets/be4bb7b3-8e95-487a-8050-662ea37874b3)
+
 
 
 ### Cidade de origem do produto
