@@ -127,7 +127,7 @@ Utilizando o **Module Federation** do Angular/Webpack nas 3 aplicações, o Shel
 
 O projeto possui um `json-server` para servir como um backend mockado.
 
-## Diagrama de sequência por API
+## Diagrama de sequência (API)
 
   
 <img width="3840" height="3136" alt="MFE Itaú App _ Mermaid Chart-2025-08-10-020156" src="https://github.com/user-attachments/assets/2490e052-8fd4-4b7c-a311-45f198331af3" />
