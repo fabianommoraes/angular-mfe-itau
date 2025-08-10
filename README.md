@@ -42,7 +42,14 @@ A aplicação Shell (também conhecida como Host), será servida em `http://loca
 
 ## Sobre o projeto
 
-Utilizando o **Module Federation** nas 3 aplicações, o Shell pode consumir as aplicações e renderizar os módulos e componentes em sua tela. Ele é responsável por configurar as rotas e servir como a casca orquestrando os MFEs (que são conhecidos como Remotes).
+O projeto foi desenvolvido em Angular 20, utilizando o CLI para *bootstrapar* a aplicação.
+
+O Angular é um framework completo para desenvolvimento de aplicações Web, principalmente Single-Page Applications (SPAs).
+Também é possível usar o CLI para gerar aplicações Angular com Server-Side Rendering (SSR), Static Site Generation (SSG) e também aplicações Híbridas, para tirar o melhor proveito em cada cenário.
+
+Utilizando o **Module Federation** do Angular/Webpack nas 3 aplicações, o Shell pode consumir as aplicações e renderizar os módulos e componentes em sua tela. Ele é responsável por configurar as rotas e servir como a casca orquestrando os MFEs (que são conhecidos como Remotes).
+
+O projeto possui um `json-server` para servir como um backend mockado.
 
 ## Diagrama de sequência por API
 
@@ -81,11 +88,14 @@ Para rodar os testes de unidade, utilize o seguinte comando:
 
 `npm run test`
 
+O Angular CLI já possui ferramentas para testes (Karma e Jasmine)
+
 <img width="895" height="756" alt="Captura de tela de 2025-08-10 03-48-59" src="https://github.com/user-attachments/assets/7b71c418-2afe-472f-95f3-df2117d947d3" />
 
 
 ## Testes E2E
 Para rodar os testes de *e2e*, digite o seguinte comando (disponível apenas no projeto `shell-mod`):
+Foi utilizado o Cypress.
 
 `npm run cypress:open`
 
