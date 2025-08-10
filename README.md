@@ -116,7 +116,7 @@ angular-mfe-itau/
 
 ```
 
-## Sobre o projeto
+### Sobre o projeto
 
 O projeto foi desenvolvido em Angular 20, utilizando o CLI para *bootstrapar* a aplicação.
 
@@ -127,7 +127,7 @@ Utilizando o **Module Federation** do Angular/Webpack nas 3 aplicações, o Shel
 
 O projeto possui um `json-server` para servir como um backend mockado.
 
-## Diagrama de sequência por API
+### Diagrama de sequência por API
 
   
 <img width="3840" height="3136" alt="MFE Itaú App _ Mermaid Chart-2025-08-10-020156" src="https://github.com/user-attachments/assets/2490e052-8fd4-4b7c-a311-45f198331af3" />
@@ -136,7 +136,7 @@ O projeto possui um `json-server` para servir como um backend mockado.
 Graças ao Module Federation, também é possível que o Host consuma os Remotes em tempo real, e caso umas das aplicações falhar, é possível exibir um *Fallback*: o Shell e as demais funcionalidades continuam executando, melhorando a disponibilidade e a experiência do usuário.
 
   
-## Observações técnicas
+### Observações técnicas
 
 ### Escolhendo a forma de comunicação entre MFEs
 
@@ -161,7 +161,7 @@ Também foi desenvolvido para dispositivos móveis.
 [Gravação de tela de 2025-08-10 03-44-45.webm](https://github.com/user-attachments/assets/be4bb7b3-8e95-487a-8050-662ea37874b3)
 
 
-## Testes de Unidade
+### Testes de Unidade
 Para rodar os testes de unidade, utilize o seguinte comando:
 
 `npm run test`
@@ -171,7 +171,7 @@ O Angular CLI já possui ferramentas para testes (Karma e Jasmine)
 <img width="895" height="756" alt="Captura de tela de 2025-08-10 03-48-59" src="https://github.com/user-attachments/assets/7b71c418-2afe-472f-95f3-df2117d947d3" />
 
 
-## Testes E2E
+### Testes E2E
 Para rodar os testes de *e2e*, digite o seguinte comando (disponível apenas no projeto `shell-mod`):
 Foi utilizado o Cypress.
 
@@ -180,7 +180,7 @@ Foi utilizado o Cypress.
 <img width="1781" height="965" alt="Captura de tela de 2025-08-10 04-07-31" src="https://github.com/user-attachments/assets/772c904a-1537-49a8-9bf3-81fd573a6b06" />
 
 
-## Uso do Copilot
+### Uso do Copilot
 O Copilot foi utilizado para criar a interface (CSS).
 Exemplo de prompts: `Crie um componente X com base na interface e feel&like do Itaú, utilizando os tokens providos`
 
@@ -189,7 +189,7 @@ Também foi utilizado para gerar arquivos de testes de unidade (`.spec.ts`).
 Exemplo de prompt: `Escreva testes de unidade para este componente` (dentro do VSCode o Copilot já recebe o arquivo para referência).
 A maioria dos testes saem quebrados, então é necessário supervisão e correção um a um.
 
-## Manuntenção e Monitoramento
+### Manuntenção e Monitoramento
 o projeto principal Shell possui configurado as seguintes ferramentas:
 
 - Husky, Commitlint e SemVer para padronização de commits e versionamento;
@@ -198,7 +198,7 @@ o projeto principal Shell possui configurado as seguintes ferramentas:
 
   
 
-## GitHub Actions
+### GitHub Actions
 O projeto possui um exemplo de *Actions* onde as aplicações podem passar por um CI/CD independente, como Lint, Testes de Unidade e E2E, Deploy.
 Como as aplicações estão no mesmo repositório, podemos triggerar o CI/CD com branches diferentes.
 Neste projeto as aplicações são apenas buildadas.
