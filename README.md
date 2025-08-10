@@ -189,6 +189,14 @@ Também foi utilizado para gerar arquivos de testes de unidade (`.spec.ts`).
 Exemplo de prompt: `Escreva testes de unidade para este componente` (dentro do VSCode o Copilot já recebe o arquivo para referência).
 A maioria dos testes saem quebrados, então é necessário supervisão e correção um a um.
 
+## Manuntenção e Monitoramento
+o projeto principal Shell possui configurado as seguintes ferramentas:
+
+- Husky, Commitlint e SemVer para padronização de commits e versionamento;
+- Sentry SDK já configurado para monitoramento de aplicações Angular;
+- Google Analytics configurado para análise de dados como conversão de Cadastro, funil, etc
+
+  
 
 ## GitHub Actions
 O projeto possui um exemplo de *Actions* onde as aplicações podem passar por um CI/CD independente, como Lint, Testes de Unidade e E2E, Deploy.
