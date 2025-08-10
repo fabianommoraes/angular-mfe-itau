@@ -194,9 +194,9 @@ A maioria dos testes saem quebrados, então é necessário supervisão e correç
 ## Manuntenção e Monitoramento
 o projeto principal Shell possui configurado as seguintes ferramentas:
 
-- Husky, Commitlint e SemVer para padronização de commits e versionamento;
-- Sentry SDK já configurado para monitoramento de aplicações Angular;
-- Google Analytics configurado para análise de dados como conversão de Cadastro, funil, etc
+- **Husky**, **Commitlint** e **SemVer** para padronização de commits e versionamento;
+- **Sentry SDK** já configurado para monitoramento de aplicações Angular;
+- **Google Analytics** configurado para futura análise de dados como conversão de Cadastro, funil, etc
 
   
 
