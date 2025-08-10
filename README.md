@@ -106,6 +106,7 @@ Foi utilizado o Cypress.
 
 ## GitHub Actions
 O projeto possui um exemplo de *Actions* onde as aplicações podem passar por um CI/CD independente, como Lint, Testes de Unidade e E2E, Deploy.
+Como as aplicações estão no mesmo repositório, podemos triggerar o CI/CD com branches diferentes.
 Nesse exemplo as aplicações são apenas buildadas.
 
 <img width="1418" height="465" alt="Captura de tela de 2025-08-10 04-09-21" src="https://github.com/user-attachments/assets/c908ee0d-2e53-4bee-a5f1-8d2a8d50f874" />
