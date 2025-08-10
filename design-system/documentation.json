@@ -360,11 +360,11 @@
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "@if (tag === 'button') {\n<button\n  class=\"custom-btn\"\n  [type]=\"type\"\n  [ngClass]=\"[variant, size]\"\n  [disabled]=\"disabled\"\n>\n  {{ text }}\n</button>\n} @if (tag === 'a') {\n<a\n  class=\"custom-btn\"\n  [routerLink]=\"href\"\n  [type]=\"type\"\n  [ngClass]=\"[variant, size]\"\n>\n  {{ text }}\n</a>\n}\n"
+            "templateData": "@if (tag === 'button') {\n<button\n  class=\"custom-btn\"\n  [type]=\"type\"\n  [ngClass]=\"[variant, size]\"\n  [disabled]=\"disabled\"\n  [attr.aria-disabled]=\"disabled ? 'true' : null\"\n>\n  {{ text }}\n</button>\n} @if (tag === 'a') {\n<a\n  class=\"custom-btn\"\n  [routerLink]=\"href\"\n  [ngClass]=\"[variant, size]\"\n  [attr.aria-disabled]=\"disabled ? 'true' : null\"\n  [attr.role]=\"disabled ? 'button' : null\"\n  [attr.tabindex]=\"disabled ? '-1' : null\"\n>\n  {{ text }}\n</a>\n}\n"
         },
         {
             "name": "InputComponent",
-            "id": "component-InputComponent-ff29028e62f15ff5bbd2a9a79de6c3f828a8661c098313a79b133de1742940ae769cde56b1ac1e6d46abbbb08dcf0c62f288c755e24c96cb087f6cd8fcf1078d",
+            "id": "component-InputComponent-f0053b06faa1ec757458437ae5ece46e74b01b9b19a36203aa8886e22b944fe0b146a7fbd44fc0cb048c2b4a02d4e28e6f6c7af79f88aa715629527ec66e5498",
             "file": "src/app/input/input.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -390,7 +390,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 23,
+                    "line": 24,
                     "type": "boolean",
                     "decorators": []
                 },
@@ -398,7 +398,15 @@
                     "name": "errorMessage",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 21,
+                    "line": 22,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
                     "type": "string",
                     "decorators": []
                 },
@@ -407,7 +415,7 @@
                     "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 22,
+                    "line": 23,
                     "type": "boolean",
                     "decorators": []
                 },
@@ -415,7 +423,7 @@
                     "name": "label",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 18,
+                    "line": 19,
                     "type": "string",
                     "decorators": []
                 },
@@ -423,7 +431,7 @@
                     "name": "placeholder",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 19,
+                    "line": 20,
                     "type": "string",
                     "decorators": []
                 },
@@ -432,7 +440,7 @@
                     "defaultValue": "'text'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 20,
+                    "line": 21,
                     "type": "string",
                     "decorators": []
                 }
@@ -448,7 +456,7 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 27
+                    "line": 28
                 },
                 {
                     "name": "onTouched",
@@ -459,18 +467,18 @@
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 28
+                    "line": 29
                 },
                 {
                     "name": "value",
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "string",
+                    "type": "string | null",
                     "indexKey": "",
                     "optional": false,
                     "description": "",
-                    "line": 25
+                    "line": 26
                 }
             ],
             "methodsClass": [
@@ -479,7 +487,7 @@
                     "args": [
                         {
                             "name": "val",
-                            "type": "string",
+                            "type": "string | null",
                             "deprecated": false,
                             "deprecationMessage": ""
                         }
@@ -487,13 +495,13 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 30,
+                    "line": 31,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
                         {
                             "name": "val",
-                            "type": "string",
+                            "type": "string | null",
                             "deprecated": false,
                             "deprecationMessage": "",
                             "tagName": {
@@ -523,7 +531,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 38,
+                    "line": 39,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -560,7 +568,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 41,
+                    "line": 42,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -589,7 +597,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 35,
+                    "line": 36,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -614,7 +622,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, forwardRef } from '@angular/core';\nimport { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';\n\n@Component({\n  selector: 'ds-input',\n  standalone: false,\n  templateUrl: './input.html',\n  styleUrl: './input.scss',\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      useExisting: forwardRef(() => InputComponent),\n      multi: true,\n    },\n  ],\n})\nexport class InputComponent implements ControlValueAccessor {\n  @Input() label?: string;\n  @Input() placeholder?: string;\n  @Input() type: string = 'text';\n  @Input() errorMessage?: string;\n  @Input() invalid: boolean = false;\n  @Input() disabled: boolean = false;\n\n  value: string = '';\n\n  onChange = (_: any) => {};\n  onTouched = () => {};\n\n  onInput(val: string) {\n    this.value = val || '';\n    this.onChange(val);\n  }\n\n  writeValue(value: string): void {\n    this.value = value ?? '';\n  }\n  registerOnChange(fn: (_: any) => void): void {\n    this.onChange = fn;\n  }\n  registerOnTouched(fn: () => void): void {\n    this.onTouched = fn;\n  }\n}\n",
+            "sourceCode": "import { Component, Input, forwardRef, input } from '@angular/core';\nimport { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';\n\n@Component({\n  selector: 'ds-input',\n  standalone: false,\n  templateUrl: './input.html',\n  styleUrl: './input.scss',\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      useExisting: forwardRef(() => InputComponent),\n      multi: true,\n    },\n  ],\n})\nexport class InputComponent implements ControlValueAccessor {\n  @Input() id!: string;\n  @Input() label?: string;\n  @Input() placeholder?: string;\n  @Input() type: string = 'text';\n  @Input() errorMessage?: string;\n  @Input() invalid: boolean = false;\n  @Input() disabled: boolean = false;\n\n  value: string | null = '';\n\n  onChange = (_: any) => {};\n  onTouched = () => {};\n\n  onInput(val: string | null) {\n    this.value = val || null;\n    this.onChange(val);\n  }\n\n  writeValue(value: string): void {\n    this.value = value ?? '';\n  }\n  registerOnChange(fn: (_: any) => void): void {\n    this.onChange = fn;\n  }\n  registerOnTouched(fn: () => void): void {\n    this.onTouched = fn;\n  }\n}\n",
             "styleUrl": "./input.scss",
             "assetsDirs": [],
             "styleUrlsData": "",
@@ -623,7 +631,7 @@
             "implements": [
                 "ControlValueAccessor"
             ],
-            "templateData": "@if (label) {\n<label class=\"custom-input-label\">{{ label }}</label>\n}\n<input\n  [type]=\"type\"\n  [value]=\"value\"\n  (input)=\"onInput($event.target.value)\"\n  [placeholder]=\"placeholder\"\n  [disabled]=\"disabled\"\n  [class.invalid]=\"invalid\"\n  class=\"custom-input\"\n  (blur)=\"onTouched()\"\n/>\n@if (invalid && errorMessage) {\n<div class=\"custom-input-error\">{{ errorMessage }}</div>\n}\n"
+            "templateData": "@if (label) {\n<label class=\"custom-input-label\" [for]=\"id\">{{ label }}</label>\n}\n<input\n  [id]=\"id\"\n  [type]=\"type\"\n  [value]=\"value\"\n  (input)=\"onInput($event.target.value)\"\n  [placeholder]=\"placeholder\"\n  [disabled]=\"disabled\"\n  [class.invalid]=\"invalid\"\n  [attr.aria-invalid]=\"invalid ? 'true' : null\"\n  [attr.aria-describedby]=\"invalid && errorMessage ? id + '-error' : null\"\n  class=\"custom-input\"\n  (blur)=\"onTouched()\"\n/>\n@if (invalid && errorMessage) {\n<div class=\"custom-input-error\" [id]=\"id + '-error'\">{{ errorMessage }}</div>\n}\n"
         },
         {
             "name": "NotFoundComponent",
@@ -895,7 +903,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import \"../../styles.scss\";\n\n.radio-group {\n  display: flex;\n  gap: $ds-spacing-lg; // 24px spacing between options\n  margin-bottom: $ds-spacing-sm;\n}\n\n.custom-radio-label {\n  display: block;\n  font-family: $ds-font-family;\n  font-size: $ds-font-size-md;\n  font-weight: $ds-font-weight-bold;\n  margin-bottom: $ds-spacing-sm;\n  color: $ds-dark;\n}\n\n.radio-option {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: $ds-spacing-sm; // 8px between radio and label\n  font-size: $ds-font-size-md;\n  font-family: $ds-font-family;\n  cursor: pointer;\n  position: relative;\n  min-height: 32px; // 4x8px for touch target\n}\n\n.custom-radio-input {\n  opacity: 0;\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 32px;\n  height: 32px;\n  margin: 0;\n  z-index: 2;\n  cursor: pointer;\n}\n\n.custom-radio-custom {\n  width: 24px;\n  height: 24px;\n  border-radius: 50%;\n  border: 2px solid $ds-primary;\n  background: $ds-white;\n  box-shadow: 0 2px 8px rgba($ds-dark, 0.06);\n  display: inline-block;\n  position: relative;\n  transition: border-color 0.2s, box-shadow 0.2s;\n\n  // Checked state\n  .custom-radio-input:checked + & {\n    border-color: $ds-primary;\n    box-shadow: 0 0 0 4px rgba($ds-primary, 0.12);\n  }\n\n  // Focus state\n  .custom-radio-input:focus + & {\n    border-color: darken($ds-primary, 8%);\n    box-shadow: 0 0 0 4px rgba($ds-primary, 0.24);\n    outline: none;\n  }\n\n  // Disabled state\n  .custom-radio-input:disabled + & {\n    border-color: $ds-gray;\n    background: $ds-gray;\n    cursor: not-allowed;\n    opacity: 0.7;\n  }\n\n  // Inner dot\n  &::after {\n    content: \"\";\n    display: block;\n    width: 12px;\n    height: 12px;\n    border-radius: 50%;\n    background: $ds-primary;\n    position: absolute;\n    top: 4px;\n    left: 4px;\n    opacity: 0;\n    transition: opacity 0.2s;\n  }\n  .custom-radio-input:checked + &::after {\n    opacity: 1;\n  }\n}\n\n.custom-radio-text {\n  color: $ds-dark;\n  font-size: $ds-font-size-md;\n  font-weight: $ds-font-weight-normal;\n  font-family: $ds-font-family;\n\n  margin-top: 3px;\n}\n\n.radio-group.invalid .custom-radio-custom {\n  border-color: red;\n  box-shadow: 0 0 0 2px rgba(red, 0.12);\n}\n\n.text-danger {\n  color: red;\n  font-size: $ds-font-size-sm;\n  margin-top: $ds-spacing-xs;\n  font-family: $ds-font-family;\n}\n",
+                    "data": "@import \"../../styles.scss\";\n\n.radio-group {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-evenly;\n  align-items: center;\n  gap: $ds-spacing-sm;\n  margin-bottom: $ds-spacing-sm;\n  border: none;\n}\n\n.custom-radio-label {\n  display: block;\n  font-family: $ds-font-family;\n  font-size: $ds-font-size-md;\n  font-weight: $ds-font-weight-bold;\n  margin-bottom: $ds-spacing-lg;\n  color: $ds-dark;\n}\n\n.radio-option {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: $ds-spacing-sm;\n  font-size: $ds-font-size-md;\n  font-family: $ds-font-family;\n  cursor: pointer;\n  position: relative;\n  min-height: 32px;\n}\n\n.custom-radio-input {\n  opacity: 0;\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 32px;\n  height: 32px;\n  margin: 0;\n  z-index: 2;\n  cursor: pointer;\n}\n\n.custom-radio-custom {\n  width: 24px;\n  height: 24px;\n  border-radius: 50%;\n  border: 2px solid $ds-primary;\n  background: $ds-white;\n  box-shadow: 0 2px 8px rgba($ds-dark, 0.06);\n  display: inline-block;\n  position: relative;\n  transition: border-color 0.2s, box-shadow 0.2s;\n\n  .custom-radio-input:checked + & {\n    border-color: $ds-primary;\n    box-shadow: 0 0 0 4px rgba($ds-primary, 0.12);\n  }\n\n  .custom-radio-input:focus + & {\n    border-color: $ds-dark;\n    box-shadow: 0 0 0 4px rgba($ds-primary, 0.24);\n    outline: none;\n  }\n\n  .custom-radio-input:disabled + & {\n    border-color: $ds-gray;\n    background: $ds-gray;\n    cursor: not-allowed;\n    opacity: 0.7;\n  }\n\n  &::after {\n    content: \"\";\n    display: block;\n    width: 12px;\n    height: 12px;\n    border-radius: 50%;\n    background: $ds-primary;\n    position: absolute;\n    top: 4px;\n    left: 4px;\n    opacity: 0;\n    transition: opacity 0.2s;\n  }\n  .custom-radio-input:checked + &::after {\n    opacity: 1;\n  }\n}\n\n.custom-radio-text {\n  color: $ds-dark;\n  font-size: $ds-font-size-md;\n  font-weight: $ds-font-weight-normal;\n  font-family: $ds-font-family;\n  margin-top: 3px;\n}\n\n.radio-group.invalid .custom-radio-custom {\n  border-color: red;\n  box-shadow: 0 0 0 2px rgba(red, 0.12);\n}\n\n.text-danger {\n  color: red;\n  font-size: $ds-font-size-sm;\n  margin-top: $ds-spacing-xs;\n  font-family: $ds-font-family;\n}\n\n@media (min-width: 700px) {\n  .radio-group {\n    flex-direction: row;\n    gap: $ds-spacing-lg;\n  }\n}\n",
                     "styleUrl": "./radiobutton.scss"
                 }
             ],
@@ -904,7 +912,7 @@
             "implements": [
                 "ControlValueAccessor"
             ],
-            "templateData": "@if (label) {\n<label class=\"custom-radio-label\">{{ label }}</label>\n}\n<div class=\"radio-group\">\n  @for (option of options; track option.value) {\n  <label class=\"radio-option\">\n    <input\n      type=\"radio\"\n      [name]=\"name\"\n      [value]=\"option.value\"\n      [checked]=\"value === option.value\"\n      (change)=\"select(option.value)\"\n      class=\"custom-radio-input\"\n    />\n    <span class=\"custom-radio-custom\"></span>\n    <span class=\"custom-radio-text\">{{ option.label }}</span>\n  </label>\n  }\n</div>\n"
+            "templateData": "<fieldset class=\"radio-group\" [attr.aria-labelledby]=\"name + '-legend'\">\n  <legend class=\"custom-radio-label\" [id]=\"name + '-legend'\">\n    {{ label }}\n  </legend>\n\n  @for (option of options; track option.value) {\n  <label class=\"radio-option\" [for]=\"name + '-' + option.value\">\n    <input\n      type=\"radio\"\n      [id]=\"name + '-' + option.value\"\n      [name]=\"name\"\n      [value]=\"option.value\"\n      [checked]=\"value === option.value\"\n      (change)=\"select(option.value)\"\n      class=\"custom-radio-input\"\n      [attr.aria-checked]=\"value === option.value ? 'true' : 'false'\"\n    />\n    <span class=\"custom-radio-custom\"></span>\n    <span class=\"custom-radio-text\">{{ option.label }}</span>\n  </label>\n  }\n</fieldset>\n"
         },
         {
             "name": "SkeletonComponent",
@@ -1528,7 +1536,7 @@
                 "linktype": "component",
                 "name": "InputComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/14",
+                "coverageCount": "0/15",
                 "status": "low"
             },
             {
