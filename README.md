@@ -45,7 +45,9 @@ Volte ao diretório **shell-mod**, execute:
 `ng serve`
 
 A aplicação Shell (também conhecida como Host), será servida em `http://localhost:4200/`
-A aplicação de cadastro será servida em `http://localhost:4201/` (vazia) e para acessar o módulo servido ao host: `http://localhost:4201/user`
+
+A aplicação de cadastro será servida em `http://localhost:4201/` (vazia) e para acessar o módulo servido ao host: `http://localhost:4201/cadastro`
+
 A aplicação de sucesso será servida em `http://localhost:4202/` (vazia) e para acessar o módulo servido ao host: `http://localhost:4202/sucesso?{{URLParams}}` ou `http://localhost:4202/sucesso/usuario/:userId` 
 
 O DS não possui aplicação principal, mas possui Storybook.
