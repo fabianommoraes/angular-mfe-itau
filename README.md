@@ -42,7 +42,7 @@ A aplicação Shell (também conhecida como Host), será servida em `http://loca
 
 ## Sobre o projeto
 
-Utilizando o **Module Federation** nas 3 aplicações, o Shell pode consumir as aplicações e renderizar os módulos e componentes em sua tela. Ele é responsável por configurar as rotas e servir como a casca orquestrando os MFEs, (que são conhecidos como Remotes).
+Utilizando o **Module Federation** nas 3 aplicações, o Shell pode consumir as aplicações e renderizar os módulos e componentes em sua tela. Ele é responsável por configurar as rotas e servir como a casca orquestrando os MFEs (que são conhecidos como Remotes).
 
 ## Diagrama de sequência por API
 <img width="3840" height="3136" alt="MFE Itaú App _ Mermaid Chart-2025-08-10-020156" src="https://github.com/user-attachments/assets/2490e052-8fd4-4b7c-a311-45f198331af3" />
