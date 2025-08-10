@@ -3,12 +3,14 @@
     {
       "id": "1",
       "name": "João",
-      "email": "joao@email.com"
+      "email": "joao@email.com",
+      "choice": "URL Params"
     },
     {
       "id": "2",
       "name": "Maria",
-      "email": "maria@email.com"
+      "email": "maria@email.com",
+      "choice": "URL Params"
     },
     {
       "id": "c58d",
@@ -42,6 +44,24 @@
     },
     {
       "id": "12cf",
+      "name": "fabiano moraes",
+      "email": "fabiano.m.moraes@gmail.com",
+      "choice": "API"
+    },
+    {
+      "id": "d9cc",
+      "name": "Fabiano Moraes",
+      "email": "fabiano.m.moraes@gmail.com",
+      "choice": "API"
+    },
+    {
+      "id": "ec24",
+      "name": "fabiano moraes",
+      "email": "fabiano.m.moraes@gmail.com",
+      "choice": "API"
+    },
+    {
+      "id": "6632",
       "name": "fabiano moraes",
       "email": "fabiano.m.moraes@gmail.com",
       "choice": "API"
