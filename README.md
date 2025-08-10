@@ -16,37 +16,37 @@ Idealmente o Desing System poderia ser exportado e publicado como um pacote `npm
 ## Instalação
 Para instalar os projetos e executá-los, siga esta ordem:
 
-No diretório `shell-mod`, execute:
+No diretório **shell-mod**, execute:
 
 `npm i`
 
 `npx json-server db.json`
 
 
-No diretório `design-system`, execute:
+No diretório **design-system**, execute:
 
 `npm i`
 
 
-No diretório sucess-mod, execute:
-
-`npm i`
-
-`ng serve`
-
-No diretório using-mod, execute:
+No diretório **sucess-mod**, execute:
 
 `npm i`
 
 `ng serve`
 
-Volte ao diretório shell-mod, execute:
+No diretório **using-mod**, execute:
+
+`npm i`
+
+`ng serve`
+
+Volte ao diretório **shell-mod**, execute:
 
 `ng serve`
 
 A aplicação Shell (também conhecida como Host), será servida em `http://localhost:4200/`
-A aplicação de cadastro será servida em `http://localhost:4201/` e para acessar o módulo servido ao host: `http://localhost:4201/user`
-A aplicação de sucesso será servida em `http://localhost:4202/` e para acessar o módulo servido ao host: `http://localhost:4202/sucesso` ou `http://localhost:4202/sucesso/usuario/:userId` 
+A aplicação de cadastro será servida em `http://localhost:4201/` (vazia) e para acessar o módulo servido ao host: `http://localhost:4201/user`
+A aplicação de sucesso será servida em `http://localhost:4202/` (vazia) e para acessar o módulo servido ao host: `http://localhost:4202/sucesso?{{URLParams}}` ou `http://localhost:4202/sucesso/usuario/:userId` 
 
 O DS não possui aplicação principal, mas possui Storybook.
 
