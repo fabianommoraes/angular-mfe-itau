@@ -1,0 +1,28 @@
+name: Shell Push
+
+on:
+  push:
+    branches:
+      - "shell*"
+jobs:
+  shell-mod:
+    name: shell-mod build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: shell-mod
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint (example)
+        run: npm install
+
+      - name: Run tests (example)
+        run: npm install

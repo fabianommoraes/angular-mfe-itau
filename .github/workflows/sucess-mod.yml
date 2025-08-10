@@ -1,0 +1,23 @@
+name: Sucess Push Workflow
+
+on:
+  push:
+    branches:
+      - "sucess*"
+jobs:
+  shell-mod:
+    name: sucess-mod build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: sucess-mod
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - run: npm install
+
+      - run: npm run build
