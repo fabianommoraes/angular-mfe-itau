@@ -44,12 +44,28 @@ A aplicação Shell (também conhecida como Host), será servida em `http://loca
 
 Utilizando o **Module Federation** nas 3 aplicações, o Shell pode consumir as aplicações e renderizar os módulos e componentes em sua tela. Ele é responsável por configurar as rotas e servir como a casca orquestrando os MFEs, (que são conhecidos como Remotes).
 
-## Diagrama de sequência
+## Diagrama de sequência por API
 <img width="3840" height="3136" alt="MFE Itaú App _ Mermaid Chart-2025-08-10-020156" src="https://github.com/user-attachments/assets/2490e052-8fd4-4b7c-a311-45f198331af3" />
-
 Graças ao **Module Federation**, também é possível que o Host consuma os Remotes em tempo real, e caso umas das aplicações falhar, é possível exibir um *Fallback*: o Shell e as demais funcionalidades continuam executando, melhorando a disponibilidade e a experiência do usuário.
 
+
+
 ## Observações técnicas
+
+### Escolhendo a forma de comunicação entre MFEs
+
+É possível escolher a forma como as MFEs se comunicam, para exemplificar que existem N formas das MFEs se comunicarem. Neste projeto são demonstradas a comunicação via **API** e **URL Params**. Como em qualquer desenvolvimento de software, cada uma possui vantagens e desvantagens e certos casos de uso específicos.
+
+<img width="939" height="960" alt="Captura de tela de 2025-08-10 03-28-51" src="https://github.com/user-attachments/assets/1d040836-7896-4568-9980-0acae6fde205" />
+
+### Storybook e Desing System
+
+A arquitetura de MFEs praticamente pede a implementação de um Design System. O DS permite que os componentes sejam compartilhados tornando a interface coesa e contribuindo para a experiência do usuário.
+
+Este projeto possui uma pequena biblioteca de componentes que simula um DS e um sandbox no Storybook
+
+[Gravação de tela de 2025-08-10 03-35-51.webm](https://github.com/user-attachments/assets/13281eb0-b35b-40c6-be34-70844a346b97)
+
 
 ### Cidade de origem do produto
 
