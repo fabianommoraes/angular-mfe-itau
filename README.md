@@ -127,6 +127,8 @@ Utilizando o **Module Federation** do Angular/Webpack nas 3 aplicações, o Shel
 
 O projeto possui um `json-server` para servir como um backend mockado.
 
+**Possui design responsivo.**
+
 ## Diagrama de sequência (API)
 
   
