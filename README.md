@@ -53,19 +53,19 @@ O DS não precisa ser executado para o projeto funcionar.
 
 ### Pastas
 
-### `shell-mod/`
+`shell-mod/`
 Host da aplicação. Contém as rotas e carrega dinamicamente os Remotes. 
 Possui uma página home (`http://localhost:4200/`) com componentes internos (não é carregado um Remote).
 
-### `using-mod/`
+`using-mod/`
 Remote responsável pela realização do Cadastro. 
 Pode ser executado e acessado em `http://localhost:4201/`
 
-### `sucess/`
+`sucess/`
 Remote responsável por exibir os dados do Cadastro. 
 Pode ser executado e acessado em `http://localhost:4202/`
 
-### `design-system/`
+`design-system/`
 Biblioteca de componentes que simula um pacote de DS.
 
 ---
