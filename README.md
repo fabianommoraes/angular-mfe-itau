@@ -182,10 +182,10 @@ Foi utilizado o Cypress.
 
 ## Uso do Copilot
 O Copilot foi utilizado para criar a interface (CSS).
-Exemplo de prompts: **Crie um componente X com base na interface e feel&like do Itaú, utilizando os tokens providos**
+Exemplo de prompts: `Crie um componente X com base na interface e feel&like do Itaú, utilizando os tokens providos`
 
 Também foi utilizado para gerar arquivos de testes de unidade (`.spec.ts`).
-Examplo de prompt: Escreva testes de unidade para este componente (dentro do VSCode o Copilot já recebe o arquivo para referência)
+Examplo de prompt: `Escreva testes de unidade para este componente` (dentro do VSCode o Copilot já recebe o arquivo para referência).
 A maioria dos testes saem quebrados, então é necessário supervisão e correção um a um.
 
 
