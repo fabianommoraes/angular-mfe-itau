@@ -70,7 +70,7 @@ Graças ao Module Federation, também é possível que o Host consuma os Remotes
 
 ### Storybook e Design System
 
-A arquitetura de MFEs praticamente pede a implementação de um Design System. O DS permite que os componentes sejam compartilhados tornando a interface coesa e contribuindo para a experiência do usuário.
+A arquitetura de MFEs praticamente pede a implementação de um Design System. O DS permite que os componentes sejam compartilhados tornando a interface coesa e contribuindo para a experiência do usuário (e de desenvolvimento).
 
 Este projeto possui uma pequena biblioteca de componentes que simula um DS e um sandbox no Storybook
 
