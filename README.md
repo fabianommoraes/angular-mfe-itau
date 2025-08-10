@@ -30,15 +30,91 @@ No diretório using-mod, execute:
 
 No diretório shell-mod, execute:
 
+`npm i`
+
 `npx json-server db.json`
 
 Ainda no diretório shell-mod, execute em outra aba do terminal:
 
-`npm i`
-
 `ng serve`
 
 A aplicação Shell (também conhecida como Host), será servida em `http://localhost:4200/`
+
+O DS pode ser acessado no diretório design-system. Não possui aplicação principal, mas possui Storybook.
+Para acessar os componentes:
+
+`npm i`
+
+`npm run storybook`
+
+Acesse `http://localhost:6006/`
+
+**Observação**: Mantenha as pastas no mesmo diretório para que possam importar o componentes do DS.
+O DS não precisa ser executado para o projeto funcionar.
+
+
+### Pastas
+
+- `shell-mod/`
+
+Host da aplicação. Contém as rotas e carrega dinamicamente os Remotes. 
+Possui uma página home (`http://localhost:4200/`) com componentes internos (não é carregado um Remote).
+Possui um `json-server` para o mock do backend.
+
+- `using-mod/`
+
+Remote responsável pela realização do Cadastro. 
+Pode ser executado e acessado em `http://localhost:4201/`
+
+- `sucess/`
+
+Remote responsável por exibir os dados do Cadastro. 
+Pode ser executado e acessado em `http://localhost:4202/`
+
+- `design-system/`
+
+Biblioteca de componentes que simula um pacote de DS.
+
+---
+
+## Estrutura
+
+```plaintext
+angular-mfe-itau/
+│
+├── shell-mod/
+│   ├── src/
+│   ├── package.json
+│    .
+│    .
+│    .
+│   └── README.md
+│
+├── using-mod/
+│   ├── src/
+│   ├── package.json
+│    .
+│    .
+│    .
+│   └── README.md
+│
+├── sucess-mod/
+│   ├── src/
+│   ├── package.json
+│    .
+│    .
+│    .
+│   └── README.md
+│
+└── design-system/
+    ├── src/
+    ├── package.json
+     .
+     .
+     .
+    └── README.md
+
+```
 
 ## Sobre o projeto
 
@@ -104,10 +180,20 @@ Foi utilizado o Cypress.
 <img width="1781" height="965" alt="Captura de tela de 2025-08-10 04-07-31" src="https://github.com/user-attachments/assets/772c904a-1537-49a8-9bf3-81fd573a6b06" />
 
 
+## Uso do Copilot
+O Copilot foi utilizado para criar a interface (CSS).
+Exemplo de prompts: `Crie um componente X com base na interface e feel&like do Itaú, utilizando os tokens providos`
+
+Também foi utilizado para gerar arquivos de testes de unidade (`.spec.ts`).
+
+Exemplo de prompt: `Escreva testes de unidade para este componente` (dentro do VSCode o Copilot já recebe o arquivo para referência).
+A maioria dos testes saem quebrados, então é necessário supervisão e correção um a um.
+
+
 ## GitHub Actions
 O projeto possui um exemplo de *Actions* onde as aplicações podem passar por um CI/CD independente, como Lint, Testes de Unidade e E2E, Deploy.
 Como as aplicações estão no mesmo repositório, podemos triggerar o CI/CD com branches diferentes.
-Nesse exemplo as aplicações são apenas buildadas.
+Neste projeto as aplicações são apenas buildadas.
 
 <img width="1418" height="465" alt="Captura de tela de 2025-08-10 04-09-21" src="https://github.com/user-attachments/assets/c908ee0d-2e53-4bee-a5f1-8d2a8d50f874" />
 <img width="1418" height="465" alt="Captura de tela de 2025-08-10 04-09-08" src="https://github.com/user-attachments/assets/ea091e04-a707-496e-b193-bec3cb70de37" />
