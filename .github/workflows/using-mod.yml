@@ -1,4 +1,4 @@
-name: Using Push Workflow
+name: Using Push
 
 on:
   push:
